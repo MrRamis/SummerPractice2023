@@ -10,6 +10,9 @@
     <Compile Update="Views\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Settings\Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\User\Authorization.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\User\Authorization.xaml">
