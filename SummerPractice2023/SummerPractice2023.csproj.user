@@ -18,6 +18,36 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Resource\DictionaryBorder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryContextMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryDataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryImade.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryTabControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryTextBlok.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\DictionaryTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

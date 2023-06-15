@@ -8,10 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resource\" />
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="DB\" />
+    <Folder Include="DB\" />
+    <Folder Include="Views\Settings\" />
   </ItemGroup>
 
 </Project>

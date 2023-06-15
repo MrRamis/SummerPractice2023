@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ContextMenu">
+        <Setter Property="Background" Value="LightSkyBlue"/>
+        <Style.Resources>
+            <Style TargetType="{x:Type MenuItem}">
+                <Setter Property="Background" Value="SkyBlue"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+</ResourceDictionary>

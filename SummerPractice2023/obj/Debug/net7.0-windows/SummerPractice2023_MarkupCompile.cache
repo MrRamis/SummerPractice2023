@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
-2-237617097
+13-1245064767
 
-4-318114626
+8-360290786
 198-1736014856
-MainWindow.xaml;Views\MainWindow.xaml;
+Resource\DictionaryBorder.xaml;Resource\DictionaryButton.xaml;Resource\DictionaryContextMenu.xaml;Resource\DictionaryDataGrid.xaml;Resource\DictionaryGrid.xaml;Resource\DictionaryImade.xaml;Resource\DictionaryMenu.xaml;Resource\DictionaryTabControl.xaml;Resource\DictionaryTextBlok.xaml;Resource\DictionaryTextBox.xaml;Views\MainWindow.xaml;Views\User\Authorization.xaml;Views\User\Registration.xaml;
 
-False
+True
 
