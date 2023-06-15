@@ -21,6 +21,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Resource\dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resource\DictionaryBorder.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resource\DictionaryTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\light.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

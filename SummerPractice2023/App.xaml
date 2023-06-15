@@ -4,6 +4,19 @@
              xmlns:local="clr-namespace:SummerPractice2023"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resource/DictionaryButton.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryTextBlok.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryTextBox.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryBorder.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryMenu.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryImade.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryTabControl.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryDataGrid.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryContextMenu.xaml"/>
+                <ResourceDictionary Source="Resource/DictionaryGrid.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

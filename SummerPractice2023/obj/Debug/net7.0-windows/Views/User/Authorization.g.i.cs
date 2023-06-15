@@ -53,7 +53,7 @@ namespace SummerPractice2023.Views.User {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SummerPractice2023;V1.0.0.0;component/views/user/authorization.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SummerPractice2023;component/views/user/authorization.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\User\Authorization.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

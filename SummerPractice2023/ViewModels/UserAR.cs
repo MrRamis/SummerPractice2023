@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SummerPractice2023.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SummerPractice2023.ViewModels
 {
     internal class UserAR : INotifyPropertyChanged
     {
-        #region
+        #region Variables
         private string _IdUser;
         public string IdUser
         {
@@ -20,6 +21,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _IdUser = value;
+                NotifyPropertyChanged("IdUser");
             }
         }
 
@@ -33,6 +35,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Lodin = value;
+                NotifyPropertyChanged("Lodin");
             }
         }
 
@@ -46,6 +49,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Password = value;
+                NotifyPropertyChanged("Password");
             }
         }
 
@@ -59,6 +63,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Image = value;
+                NotifyPropertyChanged("Image");
             }
         }
 
@@ -72,6 +77,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Name = value;
+                NotifyPropertyChanged("Name");
             }
         }
 
@@ -85,6 +91,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Lastname = value;
+                NotifyPropertyChanged("Lastname");
             }
         }
 
@@ -98,6 +105,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Surname = value;
+                NotifyPropertyChanged("Surname");
             }
         }
 
@@ -111,13 +119,48 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Status = value;
+                NotifyPropertyChanged("Status");
             }
         }
         #endregion
 
+        #region Command
+        private RelayCommand _SettingsUser;
+        public RelayCommand SettingsUser
+        {
+            get
+            {
+                return _SettingsUser ?? new RelayCommand(obj =>
+                {
 
+                });
+            }
+        }
 
+        private RelayCommand _RegistrationUser;
+        public RelayCommand RegistrationUser
+        {
+            get
+            {
+                return _RegistrationUser ?? new RelayCommand(obj =>
+                {
+                    
+                });
+            }
+        }
+        
+        private RelayCommand _AuthorizationUser;
+        public RelayCommand AuthorizationUser
+        {
+            get
+            {
+                return _AuthorizationUser ?? new RelayCommand(obj =>
+                {
 
+                });
+            }
+        }
+        #endregion
 
 
         public event PropertyChangedEventHandler PropertyChanged;

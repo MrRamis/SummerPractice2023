@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:SummerPractice2023.Views.User"
         mc:Ignorable="d"
         Title="Registration" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Border>
+    <StackPanel>
+            <TextBlock Text=""/>
+            <TextBox/>
+            <TextBlock Text=""/>
+            <TextBox/>
+            <Button Content="Зарегистрироваться" Command="{Binding RegistrationUser}"/>
+        </StackPanel>
+    </Border>
 </Window>
