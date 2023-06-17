@@ -1,18 +1,25 @@
-﻿using SummerPractice2023.Models;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using SummerPractice2023.DB;
+using SummerPractice2023.Models;
+using SummerPractice2023.Views;
 using SummerPractice2023.Views.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace SummerPractice2023.ViewModels
 {
     internal class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        private string _IdUser;
+/*        private string _IdUser;
         public string IdUser
         {
             get
@@ -24,7 +31,7 @@ namespace SummerPractice2023.ViewModels
                 _IdUser = value;
                 NotifyPropertyChanged("IdUser");
             }
-        }
+        }*/
 
         private string _Lodin;
         public string Lodin
@@ -54,7 +61,7 @@ namespace SummerPractice2023.ViewModels
             }
         }
 
-        private string _Image;
+ /*       private string _Image;
         public string Image
         {
             get
@@ -122,22 +129,10 @@ namespace SummerPractice2023.ViewModels
                 _Status = value;
                 NotifyPropertyChanged("Status");
             }
-        }
+        }*/
         #endregion
 
         #region Command
-        private RelayCommand _SettingsUser;
-        public RelayCommand SettingsUser
-        {
-            get
-            {
-                return _SettingsUser ?? new RelayCommand(obj =>
-                {
-
-                });
-            }
-        }
-
         private RelayCommand _RegistrationUser;
         public RelayCommand RegistrationUser
         {
@@ -145,11 +140,10 @@ namespace SummerPractice2023.ViewModels
             {
                 return _RegistrationUser ?? new RelayCommand(obj =>
                 {
-                    
+                    EFCommandModel.AddUser(Lodin, Password);
                 });
             }
         }
-
         private RelayCommand _RegistrationUserWindow;
         public RelayCommand RegistrationUserWindow
         {
@@ -170,7 +164,20 @@ namespace SummerPractice2023.ViewModels
             {
                 return _AuthorizationUser ?? new RelayCommand(obj =>
                 {
-
+                    Window? wnd = obj as Window;
+                    if (EFCommandModel.GetUser(Lodin, Password) != null)
+                    {
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+                        wnd.Close();
+                    }
+                    else
+                    {
+                        TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
+                        TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
+                        TextBoxLodin.Background = Brushes.Red;
+                        TextBoxPassword.Background = Brushes.Red;
+                    }
                 });
             }
         }
