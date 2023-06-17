@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
@@ -21,40 +23,46 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Resource\dark.xaml">
+    <Page Update="Resources\Topics\dark.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryBorder.xaml">
+    <Page Update="Resources\DictionaryBorder.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryButton.xaml">
+    <Page Update="Resources\DictionaryButton.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryContextMenu.xaml">
+    <Page Update="Resources\DictionaryContextMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryDataGrid.xaml">
+    <Page Update="Resources\DictionaryDataGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryGrid.xaml">
+    <Page Update="Resources\DictionaryGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryImade.xaml">
+    <Page Update="Resources\DictionaryImade.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryMenu.xaml">
+    <Page Update="Resources\DictionaryMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryTabControl.xaml">
+    <Page Update="Resources\DictionaryTabControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryTextBlok.xaml">
+    <Page Update="Resources\DictionaryTextBlok.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\DictionaryTextBox.xaml">
+    <Page Update="Resources\DictionaryTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resource\light.xaml">
+    <Page Update="Resources\Languages\lang.en.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Languages\lang.ru-RU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Topics\light.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

@@ -1,4 +1,5 @@
 ﻿using SummerPractice2023.Models;
+using SummerPractice2023.Views.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -148,7 +149,20 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
-        
+
+        private RelayCommand _RegistrationUserWindow;
+        public RelayCommand RegistrationUserWindow
+        {
+            get
+            {
+                return _RegistrationUserWindow ?? new RelayCommand(obj =>
+                {
+                    Registration registration = new Registration();
+                    registration.ShowDialog();
+                });
+            }
+        }
+
         private RelayCommand _AuthorizationUser;
         public RelayCommand AuthorizationUser
         {

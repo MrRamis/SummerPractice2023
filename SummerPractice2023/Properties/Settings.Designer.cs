@@ -25,13 +25,61 @@ namespace SummerPractice2023.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ru-Ru")]
-        public string Languarge {
+        [global::System.Configuration.DefaultSettingValueAttribute("Resources/Topics/light")]
+        public string Topics {
             get {
-                return ((string)(this["Languarge"]));
+                return ((string)(this["Topics"]));
             }
             set {
-                this["Languarge"] = value;
+                this["Topics"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Resources/Topics/light")]
+        public string TopicsDefault {
+            get {
+                return ((string)(this["TopicsDefault"]));
+            }
+            set {
+                this["TopicsDefault"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1q")]
+        public string Language {
+            get {
+                return ((string)(this["Language"]));
+            }
+            set {
+                this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserLodin {
+            get {
+                return ((string)(this["UserLodin"]));
+            }
+            set {
+                this["UserLodin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserPasworg {
+            get {
+                return ((string)(this["UserPasworg"]));
+            }
+            set {
+                this["UserPasworg"] = value;
             }
         }
     }

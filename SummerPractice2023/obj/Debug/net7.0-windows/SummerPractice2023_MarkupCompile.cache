@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
-161549159534
+182127946727
 
-11-496329672
+13-862180172
 2271680919075
-Resource\dark.xaml;Resource\DictionaryBorder.xaml;Resource\DictionaryButton.xaml;Resource\DictionaryContextMenu.xaml;Resource\DictionaryDataGrid.xaml;Resource\DictionaryGrid.xaml;Resource\DictionaryImade.xaml;Resource\DictionaryMenu.xaml;Resource\DictionaryTabControl.xaml;Resource\DictionaryTextBlok.xaml;Resource\DictionaryTextBox.xaml;Resource\light.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\User\Authorization.xaml;Views\User\Registration.xaml;
+Resources\DictionaryBorder.xaml;Resources\DictionaryButton.xaml;Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryTabControl.xaml;Resources\DictionaryTextBlok.xaml;Resources\DictionaryTextBox.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru-RU.xaml;Resources\Topics\dark.xaml;Resources\Topics\light.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\User\Authorization.xaml;Views\User\Registration.xaml;
 
 False
 

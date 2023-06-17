@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SummerPractice2023.Views.User"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="800">
+        Title="Registration" Height="Auto" Width="Auto">
     <Border>
-    <StackPanel>
-            <TextBlock Text=""/>
-            <TextBox/>
-            <TextBlock Text=""/>
-            <TextBox/>
-            <Button Content="Зарегистрироваться" Command="{Binding RegistrationUser}"/>
+        <StackPanel>
+            <TextBlock Text="{DynamicResource m_Login}"/>
+            <TextBox Text=""/>
+            <TextBlock Text="{DynamicResource m_Password}"/>
+            <TextBox Text=""/>
+            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUser}"/>
         </StackPanel>
     </Border>
-</Window>
+</Window> 

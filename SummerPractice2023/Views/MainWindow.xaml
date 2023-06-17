@@ -13,17 +13,19 @@
         </Grid.RowDefinitions>
         <Menu>
             <MenuItem/>
-            <MenuItem Header="ооо">
+            <MenuItem x:Name="menuLanguage" Header="{DynamicResource m_menu_Language}">
                 <MenuItem Header="Настройки" d:Command="{Binding }"/>
                 <MenuItem Header="Авторизация" d:Command=""/>
                 <MenuItem Header="Регистрация" d:Command=""/>
             </MenuItem>
-            <MenuItem/>
+            <MenuItem>
+                <MenuItem Header="смена темы" Command="{Binding ChangeTheTheme}" />
+            </MenuItem>
         </Menu>
-        <Grid>
+        <Grid Grid.Row="1">
             <StackPanel>
             <ComboBox x:Name="styleBox" />
-            <Button Content="Hello WPF" Style="{DynamicResource ButtonStyle}" />
+                <Button Content="{DynamicResource m_menu_Language}" Style="{DynamicResource ButtonStyle}" />
             <TextBlock Text="Windows Presentation Foundation" Style="{DynamicResource TextBlockStyle}" />
             </StackPanel>
         </Grid>
