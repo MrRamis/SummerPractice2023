@@ -15,21 +15,27 @@ namespace SummerPractice2023.Models
         {
             Uri? uri = null;
 
-            if (SummerPractice2023.Properties.Settings.Default.Topics == "Resources/Topics/dark")
+            if (SummerPractice2023.Properties.Settings.Default.Topics == "/Resources/Topics/dark")
             {
                 uri = new Uri("Resources/Topics/light" + ".xaml", UriKind.Relative);
-                SummerPractice2023.Properties.Settings.Default.Topics = "Resources/Topics/light";
+                SummerPractice2023.Properties.Settings.Default.Topics = "/Resources/Topics/light";
                 SummerPractice2023.Properties.Settings.Default.Save();
+
+                ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Remove("Resources/Topics/dark.xaml");
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             }
             else
             {
                 uri = new Uri("Resources/Topics/dark" + ".xaml", UriKind.Relative);
-                SummerPractice2023.Properties.Settings.Default.Topics = "Resources/Topics/dark";
+                SummerPractice2023.Properties.Settings.Default.Topics = "/Resources/Topics/dark";
                 SummerPractice2023.Properties.Settings.Default.Save();
+
+                ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Remove("Resources/Topics/light.xaml");
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             }
-            ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
-            Application.Current.Resources.Clear();
-            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+          
         }
         public static void DefaultTheme()
         {
@@ -40,10 +46,26 @@ namespace SummerPractice2023.Models
         }
         public static void PastTopic()
         {
-            Uri uri = new Uri(SummerPractice2023.Properties.Settings.Default.Topics + ".xaml", UriKind.Relative);
-            ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
-            Application.Current.Resources.Clear();
-            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+
+
+
+
+            Uri? uri = null;
+
+            if (SummerPractice2023.Properties.Settings.Default.Topics == "/Resources/Topics/dark")
+            {
+                uri = new Uri("Resources/Topics/dark" + ".xaml", UriKind.Relative);
+                ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Remove("Resources/Topics/light.xaml");
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
+            else
+            {
+                uri = new Uri("Resources/Topics/light" + ".xaml", UriKind.Relative);
+                ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Remove("Resources/Topics/dark.xaml");
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
         }
 
 

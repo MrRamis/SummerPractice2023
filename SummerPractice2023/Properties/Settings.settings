@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Topics" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Resources/Topics/light</Value>
+      <Value Profile="(Default)">Resources/Topics/dark</Value>
     </Setting>
     <Setting Name="TopicsDefault" Type="System.String" Scope="User">
       <Value Profile="(Default)">Resources/Topics/light</Value>

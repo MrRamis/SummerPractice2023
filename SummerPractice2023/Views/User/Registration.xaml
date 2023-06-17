@@ -13,7 +13,7 @@
             <TextBox Text="{Binding Lodin}"/>
             <TextBlock Text="{DynamicResource m_Password}"/>
             <TextBox Text="{Binding Password}"/>
-            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUser}" CommandParameter="{Binding ElementName=RegistrationWindow}"/>
+            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUser}" CommandParameter="{x:Reference Name=RegistrationWindow}"/>
         </StackPanel>
     </Border>
 </Window> 

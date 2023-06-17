@@ -1,5 +1,6 @@
 ﻿using SummerPractice2023.Models;
 using System.ComponentModel;
+using System.Windows;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -18,20 +19,24 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
-        
 
-        /*  private RelayCommand _RegistrationUser;
-          public RelayCommand RegistrationUser
-          {
-              get
-              {
-                  return _RegistrationUser ?? new RelayCommand(obj =>
-                  {
 
-                  });
-              }
-          }
+        private RelayCommand _EndUser;
+        public RelayCommand EndUser
+        {
+            get
+            {
+                return _EndUser ?? new RelayCommand(obj =>
+                {
+                    SummerPractice2023.Properties.Settings.Default.UserId = "";
+                    SummerPractice2023.Properties.Settings.Default.Save();
 
+                    System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                    Application.Current.Shutdown();
+                });
+            }
+        }
+        /*
           private RelayCommand _AuthorizationUser;
           public RelayCommand AuthorizationUser
           {

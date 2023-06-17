@@ -140,7 +140,9 @@ namespace SummerPractice2023.ViewModels
             {
                 return _RegistrationUser ?? new RelayCommand(obj =>
                 {
-                    EFCommandModel.AddUser(Lodin, Password);
+                    Window? wnd = obj as Window;
+                    EFCommandModel.AddUser(Lodin, Hash.hashPassword(Password));
+                    wnd.Close();
                 });
             }
         }
@@ -165,7 +167,7 @@ namespace SummerPractice2023.ViewModels
                 return _AuthorizationUser ?? new RelayCommand(obj =>
                 {
                     Window? wnd = obj as Window;
-                    if (EFCommandModel.GetUser(Lodin, Password) != null)
+                    if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
                     {
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();

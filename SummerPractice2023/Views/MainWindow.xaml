@@ -6,28 +6,44 @@
         xmlns:local="clr-namespace:SummerPractice2023.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Style="{DynamicResource GridStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu>
-            <MenuItem/>
-            <MenuItem x:Name="menuLanguage" Header="{DynamicResource m_menu_Language}">
+
+        <Menu Grid.Row="0" Style="{DynamicResource MenuStyle}">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="0" Margin="2" HorizontalAlignment="Right">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="/Resources/Icon/человек.png"/>
+                </MenuItem.Background>
                 <MenuItem Header="Настройки" d:Command="{Binding }"/>
-                <MenuItem Header="Авторизация" d:Command=""/>
-                <MenuItem Header="Регистрация" d:Command=""/>
+                <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding EndUser}"/>
             </MenuItem>
-            <MenuItem>
-                <MenuItem Header="смена темы" Command="{Binding ChangeTheTheme}" />
+            <MenuItem x:Name="menuLanguage" Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="/Resources/Icon/земля.png"/>
+                </MenuItem.Background>
+                
+            </MenuItem>
+            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Margin="2" Grid.Column="2" HorizontalAlignment="Right">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="/Resources/Icon/настройки.png"/>
+                </MenuItem.Background>
+                <MenuItem Header="{DynamicResource m_ChangingTheTopic}" Command="{Binding ChangeTheTheme}" />
             </MenuItem>
         </Menu>
-        <Grid Grid.Row="1">
-            <StackPanel>
-            <ComboBox x:Name="styleBox" />
-                <Button Content="{DynamicResource m_menu_Language}" Style="{DynamicResource ButtonStyle}" />
-            <TextBlock Text="Windows Presentation Foundation" Style="{DynamicResource TextBlockStyle}" />
-            </StackPanel>
-        </Grid>
+        
     </Grid>
 </Window>

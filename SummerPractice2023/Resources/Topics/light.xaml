@@ -5,9 +5,21 @@
         <Setter Property="Background" Value="White" />
         <Setter Property="Foreground" Value="Gray" />
     </Style>
+    
     <Style x:Key="WindowStyle" TargetType="Window">
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="SkyBlue" />
     </Style>
+    <Style x:Key="GridStyle" TargetType="Grid">
+        <Setter Property="Background" Value="SkyBlue" />
+    </Style>
+    
+    <Style x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="SkyBlue" />
+    </Style>
+    <Style x:Key="MenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Background" Value="LightSkyBlue" />
+    </Style>
+
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="White" />
         <Setter Property="Foreground" Value="Gray" />
