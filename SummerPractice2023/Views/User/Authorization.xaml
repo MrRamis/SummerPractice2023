@@ -9,6 +9,23 @@
         Title="Authorization" Height="Auto" Width="Auto">
     <Border>
         <StackPanel>
+            <Menu>
+                <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem x:Name="menuLanguage" Width="32" Command="{Binding LanguageChange}" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/Resources/Icon/земля.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </Menu>
             <TextBlock Text="{DynamicResource m_Login}"/>
             <TextBox x:Name="Lodin" Text="{Binding Lodin}"/>
             <TextBlock Text="{DynamicResource m_Password}"/>

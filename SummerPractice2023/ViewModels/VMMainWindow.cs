@@ -6,7 +6,6 @@ namespace SummerPractice2023.ViewModels
 {
     internal class VMMainWindow : INotifyPropertyChanged
     {
-
         #region Command
         private RelayCommand _ChangeTheTheme;
         public RelayCommand ChangeTheTheme
@@ -19,7 +18,17 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
-
+        private RelayCommand _LanguageChange;
+        public RelayCommand LanguageChange
+        {
+            get
+            {
+                return _LanguageChange ?? new RelayCommand(obj =>
+                {
+                    Resource.LanguageChange();
+                });
+            }
+        }
 
         private RelayCommand _EndUser;
         public RelayCommand EndUser
@@ -36,6 +45,7 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
+
         /*
           private RelayCommand _AuthorizationUser;
           public RelayCommand AuthorizationUser
@@ -49,8 +59,14 @@ namespace SummerPractice2023.ViewModels
               }
           }*/
         #endregion
-
-
+        public void Loaded1(object sender, RoutedEventArgs e)
+        {
+            Resource.PastTopic();
+            Resource.LanguageChange();
+            Resource.PastTopic();
+            Resource.LanguageChange();
+        }
+    
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {

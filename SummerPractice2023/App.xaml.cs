@@ -15,7 +15,8 @@ namespace SummerPractice2023
     {
         public App()
         {
-            Resource.PastTopic();
+            //SummerPractice2023.Properties.Settings.Default.Reset();
+          
             if (SummerPractice2023.Properties.Settings.Default.UserId == "")
             {
                 Authorization authorization = new Authorization();

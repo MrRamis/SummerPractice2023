@@ -68,8 +68,6 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.csproj.CopyComplete
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.dll.config
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.Properties.Resources.resources
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.csproj.GenerateResource.cache
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryBorder.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryButton.baml
@@ -82,9 +80,6 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBlok.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBox.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.en.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru-RU.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Topics\dark.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Topics\light.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.exe
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.dll.config
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.deps.json
@@ -168,3 +163,6 @@ D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\refint\
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.pdb
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.genruntimeconfig.cache
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\ref\SummerPractice2023.dll
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.baml

@@ -131,7 +131,6 @@ namespace SummerPractice2023.ViewModels
             }
         }*/
         #endregion
-
         #region Command
         private RelayCommand _RegistrationUser;
         public RelayCommand RegistrationUser
@@ -183,9 +182,19 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
+
+        private RelayCommand _LanguageChange;
+        public RelayCommand LanguageChange
+        {
+            get
+            {
+                return _LanguageChange ?? new RelayCommand(obj =>
+                {
+                    Resource.LanguageChange();
+                });
+            }
+        }
         #endregion
-
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {
