@@ -36,9 +36,6 @@ namespace SummerPractice2023.Models
 
                 ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
 
-
-               // Application.Current.Resources.Remove("Resources/Topics/light.xaml");
-
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             }
         }
@@ -54,7 +51,6 @@ namespace SummerPractice2023.Models
             Uri? uri = null;
             if (SummerPractice2023.Properties.Settings.Default.Topics == "/Resources/Topics/dark")
             {
-
                 Uri? uri2 = new Uri("/Resources/Topics/light" + ".xaml", UriKind.Relative);
                 ResourceDictionary? resourceDict2 = Application.LoadComponent(uri2) as ResourceDictionary;
                 Application.Current.Resources.MergedDictionaries.Remove(resourceDict2);

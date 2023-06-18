@@ -1,6 +1,4 @@
-﻿using SummerPractice2023.Models;
-using SummerPractice2023.ViewModels;
-using System;
+﻿using SummerPractice2023.ViewModels;
 using System.Windows;
 
 namespace SummerPractice2023.Views
@@ -11,10 +9,7 @@ namespace SummerPractice2023.Views
         public MainWindow()
         {
             InitializeComponent();
-            Loaded += vMMainWindow.Loaded1;
             DataContext = vMMainWindow;
         }
-
-    
     }
 }
