@@ -1,18 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.Extensions.Logging;
 using SummerPractice2023.DB;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.User;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Xml.Linq;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -140,7 +144,15 @@ namespace SummerPractice2023.ViewModels
                 return _RegistrationUser ?? new RelayCommand(obj =>
                 {
                     Window? wnd = obj as Window;
-                    EFCommandModel.AddUser(Lodin, Hash.hashPassword(Password));
+                   
+                    if (EFCommandModel.GetUser(Lodin) != null)
+                    {
+                        MessageBox.Show("lodin");
+                    }
+                    else
+                    {
+                        EFCommandModel.AddUser(Lodin, Hash.hashPassword(Password));
+                    }
                     wnd.Close();
                 });
             }
@@ -166,18 +178,18 @@ namespace SummerPractice2023.ViewModels
                 return _AuthorizationUser ?? new RelayCommand(obj =>
                 {
                     Window? wnd = obj as Window;
-                    if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
-                    {
-                        MainWindow mainWindow = new MainWindow();
-                        mainWindow.Show();
-                        wnd.Close();
-                    }
-                    else
+                    if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) == null && Lodin.Length < 3 && Password.Length < 3)
                     {
                         TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
                         TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
                         TextBoxLodin.Background = Brushes.Red;
                         TextBoxPassword.Background = Brushes.Red;
+                    }
+                    else
+                    {
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+                        wnd.Close();
                     }
                 });
             }

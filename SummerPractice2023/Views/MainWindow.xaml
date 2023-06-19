@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SummerPractice2023.Views"
         mc:Ignorable="d"
+        x:Name="MainWindowX"
         Title="MainWindow" Height="450" Width="800">
     <Grid Style="{DynamicResource GridStyle}">
         <Grid.RowDefinitions>
@@ -29,7 +30,7 @@
                     <ImageBrush ImageSource="/Resources/Icon/человек.png"/>
                 </MenuItem.Background>
                 <MenuItem Header="Настройки" d:Command="{Binding }"/>
-                <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding EndUser}"/>
+                <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding EndUser}" CommandParameter="{x:Reference Name= MainWindowX}"/>
             </MenuItem>
             <MenuItem x:Name="menuLanguage" Width="32" Command="{Binding LanguageChange}" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
                 <MenuItem.Background>

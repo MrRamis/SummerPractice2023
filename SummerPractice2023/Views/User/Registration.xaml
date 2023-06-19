@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:SummerPractice2023.Views.User"
         mc:Ignorable="d"
         x:Name="RegistrationWindow"
+        SizeToContent="WidthAndHeight"
+        MinWidth="200"
+        WindowStartupLocation="CenterScreen"
         Title="Registration" Height="Auto" Width="Auto">
     <Border>
         <StackPanel>
-            <TextBlock Text="{DynamicResource m_Login}"/>
-            <TextBox Text="{Binding Lodin}"/>
-            <TextBlock Text="{DynamicResource m_Password}"/>
-            <TextBox Text="{Binding Password}"/>
-            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUser}" CommandParameter="{x:Reference Name=RegistrationWindow}"/>
+            <TextBlock Text="{DynamicResource m_Login}" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBox Text="{Binding Lodin}" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_Password}" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBox Text="{Binding Password}" Style="{DynamicResource TextBoxStyle}"/>
+            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUser}" Style="{DynamicResource ButtonStyle}" CommandParameter="{x:Reference Name=RegistrationWindow}"/>
         </StackPanel>
     </Border>
 </Window> 

@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:SummerPractice2023.Views.User"
         mc:Ignorable="d"
         x:Name="AuthorizationWindow"
+        SizeToContent="WidthAndHeight"
+        MinWidth="200"
+        WindowStartupLocation="CenterScreen"
         Title="Authorization" Height="Auto" Width="Auto">
     <Border>
         <StackPanel>
@@ -26,13 +29,12 @@
                     </MenuItem.Background>
                 </MenuItem>
             </Menu>
-            <TextBlock Text="{DynamicResource m_Login}"/>
-            <TextBox x:Name="Lodin" Text="{Binding Lodin}"/>
-            <TextBlock Text="{DynamicResource m_Password}"/>
-            <TextBox x:Name="Password" Text="{Binding Password}"/>
-            <Button Content="{DynamicResource m_Enter}" Command="{Binding AuthorizationUser}" CommandParameter="{x:Reference Name=AuthorizationWindow}"/>
-            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUserWindow}"/>
-
+            <TextBlock Text="{DynamicResource m_Login}"  Style="{DynamicResource TextBlockStyle}"/>
+            <TextBox x:Name="Lodin" Text="{Binding Lodin}" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_Password}" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBox x:Name="Password" Text="{Binding Password}" Style="{DynamicResource TextBoxStyle}"/>
+            <Button Content="{DynamicResource m_Enter}" Command="{Binding AuthorizationUser}" FontSize="12" CommandParameter="{x:Reference Name=AuthorizationWindow}" Style="{DynamicResource ButtonStyle}"/>
+            <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUserWindow}" Style="{DynamicResource ButtonStyle}"/>
         </StackPanel>
     </Border>
 </Window>

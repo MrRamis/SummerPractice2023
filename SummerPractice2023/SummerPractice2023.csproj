@@ -65,4 +65,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Resources\Languages\lang.en.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

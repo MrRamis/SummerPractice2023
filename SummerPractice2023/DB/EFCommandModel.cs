@@ -41,12 +41,21 @@ namespace SummerPractice2023.DB
                     return null;
             }
         }
-        public static User GetUser(string Id)
+        public static User GetUserId(string Id)
         {
             using (ApplicationContext db = new ApplicationContext())
             {
                 User user = null;
-                user = db.Users.Find(Id);
+                user = db.Users.FirstOrDefault(p => p.IdUser == Id);
+                return user;
+            }
+        }
+        public static User GetUser(string login)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            { 
+                User user = null;
+                user = db.Users.FirstOrDefault(p => p.Lodin == login);
                 return user;
             }
         }

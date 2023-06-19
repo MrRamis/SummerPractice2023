@@ -1,4 +1,5 @@
 ﻿using SummerPractice2023.Models;
+using SummerPractice2023.Views.User;
 using System.ComponentModel;
 using System.Windows;
 
@@ -38,11 +39,11 @@ namespace SummerPractice2023.ViewModels
             {
                 return _EndUser ?? new RelayCommand(obj =>
                 {
-                    SummerPractice2023.Properties.Settings.Default.UserId = "";
-                    SummerPractice2023.Properties.Settings.Default.Save();
-
-                    System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-                    Application.Current.Shutdown();
+                    Window? win = obj as Window;
+                    SummerPractice2023.Properties.Settings.Default.Reset();
+                    Authorization authorization = new Authorization();
+                    authorization.Show();
+                    win.Close();
                 });
             }
         }
