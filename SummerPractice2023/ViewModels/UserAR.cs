@@ -151,7 +151,27 @@ namespace SummerPractice2023.ViewModels
                     }
                     else
                     {
-                        EFCommandModel.AddUser(Lodin, Hash.hashPassword(Password));
+                        if (!Lodin.Contains(" ") || !Password.Contains(" ") || !Lodin.Contains("") || !Password.Contains(""))
+                        {
+                            if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) == null)
+                            {
+                                EFCommandModel.AddUser(Lodin, Hash.hashPassword(Password));
+                            }
+                            else
+                            {
+                                TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
+                                TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
+                                TextBoxLodin.Background = Brushes.Red;
+                                TextBoxPassword.Background = Brushes.Red;
+                            }
+                        }
+                        else
+                        {
+                            TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
+                            TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
+                            TextBoxLodin.Background = Brushes.Red;
+                            TextBoxPassword.Background = Brushes.Red;
+                        }
                     }
                     wnd.Close();
                 });
@@ -178,18 +198,29 @@ namespace SummerPractice2023.ViewModels
                 return _AuthorizationUser ?? new RelayCommand(obj =>
                 {
                     Window? wnd = obj as Window;
-                    if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) == null && Lodin.Length < 3 && Password.Length < 3)
+
+                    if (!Lodin.Contains(" ") || !Password.Contains(" ") || !Lodin.Contains("") || !Password.Contains(""))
+                    {
+                        if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
+                        {
+                            MainWindow mainWindow = new MainWindow();
+                            mainWindow.Show();
+                            wnd.Close();
+                        }
+                        else
+                        {
+                            TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
+                            TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
+                            TextBoxLodin.Background = Brushes.Red;
+                            TextBoxPassword.Background = Brushes.Red;
+                        }
+                    }
+                    else
                     {
                         TextBox? TextBoxLodin = wnd.FindName("Lodin") as TextBox;
                         TextBox? TextBoxPassword = wnd.FindName("Password") as TextBox;
                         TextBoxLodin.Background = Brushes.Red;
                         TextBoxPassword.Background = Brushes.Red;
-                    }
-                    else
-                    {
-                        MainWindow mainWindow = new MainWindow();
-                        mainWindow.Show();
-                        wnd.Close();
                     }
                 });
             }
@@ -207,6 +238,13 @@ namespace SummerPractice2023.ViewModels
             }
         }
         #endregion
+
+        public UserAR()
+        {
+            Lodin = "";
+            Password = "";
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {

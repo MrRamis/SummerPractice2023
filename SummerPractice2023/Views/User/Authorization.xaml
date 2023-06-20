@@ -33,7 +33,7 @@
             <TextBox x:Name="Lodin" Text="{Binding Lodin}" Style="{DynamicResource TextBoxStyle}"/>
             <TextBlock Text="{DynamicResource m_Password}" Style="{DynamicResource TextBlockStyle}"/>
             <TextBox x:Name="Password" Text="{Binding Password}" Style="{DynamicResource TextBoxStyle}"/>
-            <Button Content="{DynamicResource m_Enter}" Command="{Binding AuthorizationUser}" FontSize="12" CommandParameter="{x:Reference Name=AuthorizationWindow}" Style="{DynamicResource ButtonStyle}"/>
+            <Button Content="{DynamicResource m_Enter}" Command="{Binding AuthorizationUser}" CommandParameter="{x:Reference Name=AuthorizationWindow}" Style="{DynamicResource ButtonStyle}"/>
             <Button Content="{DynamicResource m_Register}" Command="{Binding RegistrationUserWindow}" Style="{DynamicResource ButtonStyle}"/>
         </StackPanel>
     </Border>

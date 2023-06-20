@@ -30,15 +30,15 @@ namespace SummerPractice2023.DB
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                var user = db.Users.Where(p => p.Lodin == login && p.Password == password);
-                if (user.Count() > 0)
+                var user = db.Users.FirstOrDefault(p => p.Lodin == login && p.Password == password);
+               if (user != null)
                 {
-                    SummerPractice2023.Properties.Settings.Default.UserId = user.ToList()[0].IdUser;
+                    SummerPractice2023.Properties.Settings.Default.UserId = user.IdUser;
                     SummerPractice2023.Properties.Settings.Default.Save();
-                    return user.ToList()[0];
-                }
+                    return user;
+               }
                 else
-                    return null;
+                  return null;
             }
         }
         public static User GetUserId(string Id)
