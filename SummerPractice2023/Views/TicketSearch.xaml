@@ -9,6 +9,15 @@
       Title="TicketSearch">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
             
+        </Grid>
+        <DataGrid Grid.Row="1">
+            
+        </DataGrid>
     </Grid>
 </Page>
