@@ -44,8 +44,6 @@
                 <MenuItem Header="{DynamicResource m_ChangingTheTopic}" Command="{Binding ChangeTheTheme}" />
             </MenuItem>
         </Menu>
-        <Frame Grid.Row="1">
-
-        </Frame>
+        <Frame Grid.Row="1" Content="TicketSearch" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
