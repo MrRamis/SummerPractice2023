@@ -19,22 +19,26 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0"/>
+            <TextBlock Text="{DynamicResource m_startCity}" Grid.Row="0" Grid.Column="0"/>
             <TextBox Grid.Row="1" Grid.Column="0"/>
-            <TextBlock Grid.Row="0" Grid.Column="1"/>
+            <TextBlock Text="{DynamicResource m_endCity}" Grid.Row="0" Grid.Column="1"/>
             <TextBox Grid.Row="1" Grid.Column="1"/>
-            <TextBlock Grid.Row="0" Grid.Column="2"/>
+            <TextBlock Text="{DynamicResource m_startDate}" Grid.Row="0" Grid.Column="2"/>
             <TextBox Grid.Row="1" Grid.Column="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="3"/>
+            <TextBlock Text="{DynamicResource m_endDate}" Grid.Row="0" Grid.Column="3"/>
             <TextBox Grid.Row="1" Grid.Column="3"/>
-            <TextBlock Grid.Row="0" Grid.Column="4"/>
+            <TextBlock Text="{DynamicResource m_price}" Grid.Row="0" Grid.Column="4"/>
             <TextBox Grid.Row="1" Grid.Column="4"/>
+            <Button Content="{DynamicResource m_select}" Grid.Row="0" Grid.Column="5"/>
+            <Button Content="{DynamicResource m_clean}" Grid.Row="0" Grid.Column="6"/>
         </Grid>
         <DataGrid Grid.Row="1">
             

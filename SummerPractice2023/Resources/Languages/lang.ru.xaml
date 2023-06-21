@@ -6,4 +6,13 @@
     <v:String x:Key="m_Enter">Войти</v:String>
     <v:String x:Key="m_Exit">Выйти</v:String>
     <v:String x:Key="m_ChangingTheTopic">Сменить тему</v:String>
+
+    <v:String x:Key="m_startCity">Старт</v:String>
+    <v:String x:Key="m_endCity">Конечная</v:String>
+    <v:String x:Key="m_startDate">Старт дата</v:String>
+    <v:String x:Key="m_endDate">Конец даты</v:String>
+    <v:String x:Key="m_price">Цена</v:String>
+
+    <v:String x:Key="m_select">Выбрать</v:String>
+    <v:String x:Key="m_clean">Очистить</v:String>
 </ResourceDictionary>

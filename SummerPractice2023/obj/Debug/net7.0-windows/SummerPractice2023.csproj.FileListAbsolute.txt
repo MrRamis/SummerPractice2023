@@ -139,7 +139,6 @@ D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resourc
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBlok.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBox.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.en.baml
-D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru-RU.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\MainWindow.g.cs
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\Settings\Settings.g.cs
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\Authorization.g.cs
@@ -166,3 +165,6 @@ D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\ref\Sum
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.g.cs
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.baml
+D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru.baml
+D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.g.cs
+D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.baml
