@@ -4,5 +4,6 @@
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="IsHitTestVisible" Value="False"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="2"/>
     </Style>
 </ResourceDictionary>

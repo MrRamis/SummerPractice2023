@@ -5,7 +5,7 @@
         <Setter Property="IsHitTestVisible" Value="True"/>
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="Margin" Value="1"/>
+        <Setter Property="Margin" Value="2"/>
         <Setter Property="MaxLength" Value="100"/>
     </Style>
 </ResourceDictionary>
