@@ -3,10 +3,11 @@
     <Style TargetType="TextBox">
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="IsHitTestVisible" Value="True"/>
-        <Setter Property="FontSize" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="MaxLength" Value="100"/>
+        <Setter Property="FontSize" Value="24"/>
+
         <Style.Resources>
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="5" />

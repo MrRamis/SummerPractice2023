@@ -16,4 +16,8 @@
 
     <v:String x:Key="m_select">Select</v:String>
     <v:String x:Key="m_clean">Clean</v:String>
+
+    <v:String x:Key="m_name">Name</v:String>
+    <v:String x:Key="m_family">Family</v:String>
+    <v:String x:Key="m_patronymic">Patronymic</v:String>
 </ResourceDictionary>

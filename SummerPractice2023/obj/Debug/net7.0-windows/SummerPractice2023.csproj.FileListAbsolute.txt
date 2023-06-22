@@ -172,3 +172,4 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\InfoUser.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\UpdateUser.g.cs
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\UpdateUser.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryStackPanel.baml

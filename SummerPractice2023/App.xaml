@@ -13,6 +13,9 @@
                  <ResourceDictionary Source="Resources/DictionaryDataGrid.xaml"/> 
                   <ResourceDictionary Source="Resources/DictionaryContextMenu.xaml"/> 
                 <ResourceDictionary Source="Resources/DictionaryGrid.xaml"/>
+                <ResourceDictionary Source="Resources/DictionaryStackPanel.xaml"/>
+                <ResourceDictionary Source="Resources/DictionaryImade.xaml"/>
+
 
                 <ResourceDictionary Source="Resources/Languages/lang.en.xaml"/>
                 <ResourceDictionary Source="Resources/Topics/light.xaml"/>

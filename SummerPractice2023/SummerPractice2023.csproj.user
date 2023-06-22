@@ -68,6 +68,9 @@
     <Page Update="Resources\Languages\lang.ru.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\DictionaryStackPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\User\UpdateUser.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -15,4 +15,8 @@
 
     <v:String x:Key="m_select">Выбрать</v:String>
     <v:String x:Key="m_clean">Очистить</v:String>
+
+    <v:String x:Key="m_name">Имя</v:String>
+    <v:String x:Key="m_family">Фамилие</v:String>
+    <v:String x:Key="m_patronymic">Отчество</v:String>
 </ResourceDictionary>

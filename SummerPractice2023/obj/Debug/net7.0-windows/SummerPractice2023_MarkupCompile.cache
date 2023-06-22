@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
-19300119349
+20-617854524
 
 251340680656
 2271680919075
-Resources\DictionaryBorder.xaml;Resources\DictionaryButton.xaml;Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryTabControl.xaml;Resources\DictionaryTextBlok.xaml;Resources\DictionaryTextBox.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\User\Authorization.xaml;Views\User\InfoUser.xaml;Views\User\Registration.xaml;Views\User\UpdateUser.xaml;
+Resources\DictionaryBorder.xaml;Resources\DictionaryButton.xaml;Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryStackPanel.xaml;Resources\DictionaryTabControl.xaml;Resources\DictionaryTextBlok.xaml;Resources\DictionaryTextBox.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\User\Authorization.xaml;Views\User\InfoUser.xaml;Views\User\Registration.xaml;Views\User\UpdateUser.xaml;
 
 False
 

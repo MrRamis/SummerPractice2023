@@ -13,10 +13,16 @@ namespace SummerPractice2023.ViewModels
     internal class VMMainWindow : INotifyPropertyChanged
     {
         ObservableCollection<JsData> jsData { get; set; }
+        UpdateUser updateUser { get; set; }
+        InfoUser infoUser { get; set; }
+        TicketSearch ticketSearch { get; set; }
         public VMMainWindow(ObservableCollection<JsData> jsData)
         {
             this.jsData = jsData;
-            this.jsData = CommandJson.GetAir();
+            jsData = CommandJson.GetAir();
+            this.updateUser = new UpdateUser();
+            this.infoUser = new InfoUser();
+            this.ticketSearch = new TicketSearch(jsData);
         }
         #region Command
         private RelayCommand _ChangeTheTheme;
@@ -67,9 +73,33 @@ namespace SummerPractice2023.ViewModels
                 {
                     Window wnd = obj as Window;
                     Frame block = wnd.FindName("Fram") as Frame;
-                    block.Content = new InfoUser();
-
-         //           block.Content = new TicketSearch(jsData);
+                    block.Content = ticketSearch;
+                });
+            }
+        }
+        private RelayCommand _UpdateUser;
+        public RelayCommand UpdateUser
+        {
+            get
+            {
+                return _UpdateUser ?? new RelayCommand(obj =>
+                {
+                    Window wnd = obj as Window;
+                    Frame block = wnd.FindName("Fram") as Frame;
+                    block.Content = updateUser;
+                });
+            }
+        }
+        private RelayCommand _InfoUser;
+        public RelayCommand InfoUser
+        {
+            get
+            {
+                return _InfoUser ?? new RelayCommand(obj =>
+                {
+                    Window? wnd = obj as Window;
+                    Frame? block = (Frame)wnd.FindName("Fram");
+                    block.Content = infoUser;
                 });
             }
         }

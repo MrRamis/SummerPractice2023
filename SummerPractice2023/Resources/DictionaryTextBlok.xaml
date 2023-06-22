@@ -5,6 +5,7 @@
         <Setter Property="IsHitTestVisible" Value="False"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Margin" Value="2"/>
+        <Setter Property="FontSize" Value="24"/>
         <Style.Resources>
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="5" />

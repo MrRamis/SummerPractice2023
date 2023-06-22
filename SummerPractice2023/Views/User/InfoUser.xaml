@@ -10,14 +10,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition />
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -26,12 +26,12 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1">
+                <TextBlock Text="{DynamicResource m_name}"/>
                 <TextBlock/>
-                <TextBox/>
+                <TextBlock Text="{DynamicResource m_family}"/>
                 <TextBlock/>
-                <TextBox/>
+                <TextBlock Text="{DynamicResource m_patronymic}"/>
                 <TextBlock/>
-                <TextBox/>
             </StackPanel>
         </Grid>
         
