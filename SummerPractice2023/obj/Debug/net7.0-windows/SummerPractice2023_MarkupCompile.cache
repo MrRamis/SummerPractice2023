@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\
 SummerPractice2023
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
-17-1754366281
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
+19300119349
 
-22270454264
-227-94092298
-Resources\DictionaryBorder.xaml;Resources\DictionaryButton.xaml;Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryTabControl.xaml;Resources\DictionaryTextBlok.xaml;Resources\DictionaryTextBox.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\User\Authorization.xaml;Views\User\Registration.xaml;
+251340680656
+2271680919075
+Resources\DictionaryBorder.xaml;Resources\DictionaryButton.xaml;Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryTabControl.xaml;Resources\DictionaryTextBlok.xaml;Resources\DictionaryTextBox.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\User\Authorization.xaml;Views\User\InfoUser.xaml;Views\User\Registration.xaml;Views\User\UpdateUser.xaml;
 
 False
 

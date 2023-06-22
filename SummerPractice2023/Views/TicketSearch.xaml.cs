@@ -1,5 +1,8 @@
-﻿using System;
+﻿using SummerPractice2023.DB.Js;
+using SummerPractice2023.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +18,12 @@ using System.Windows.Shapes;
 
 namespace SummerPractice2023.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для TicketSearch.xaml
-    /// </summary>
     public partial class TicketSearch : Page
     {
-        public TicketSearch()
+        public TicketSearch(ObservableCollection<JsData> jsData)
         {
             InitializeComponent();
+            DataContext = new VMTicketSearch(jsData);
         }
     }
 }

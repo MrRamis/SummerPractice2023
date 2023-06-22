@@ -40,8 +40,14 @@
             <Button Content="{DynamicResource m_select}" Grid.Row="0" Grid.Column="5"/>
             <Button Content="{DynamicResource m_clean}" Grid.Row="0" Grid.Column="6"/>
         </Grid>
-        <DataGrid Grid.Row="1">
-            
+        <DataGrid Grid.Row="1" ItemsSource="{Binding jsData}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{DynamicResource m_startCity}" Binding="{Binding startCity}"/>
+                <DataGridTextColumn Header="{DynamicResource m_endCity}" Binding="{Binding endCity}"/>
+                <DataGridTextColumn Header="{DynamicResource m_startDate}" Binding="{Binding startDate}"/>
+                <DataGridTextColumn Header="{DynamicResource m_endDate}" Binding="{Binding endDate}"/>
+                <DataGridTextColumn Header="{DynamicResource m_price}" Binding="{Binding price}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Page>

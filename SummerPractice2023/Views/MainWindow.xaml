@@ -18,6 +18,7 @@
                 <ItemsPanelTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
@@ -25,25 +26,26 @@
                     </Grid>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="0" Margin="2" HorizontalAlignment="Right">
+            <MenuItem Grid.Column="0" Header="dd" Command="{Binding TicketSearch}" CommandParameter="{Binding ElementName=MainWindowX}"/>
+            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/Resources/Icon/человек.png"/>
                 </MenuItem.Background>
                 <MenuItem Header="Настройки" d:Command="{Binding }"/>
                 <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding EndUser}" CommandParameter="{x:Reference Name= MainWindowX}"/>
             </MenuItem>
-            <MenuItem x:Name="menuLanguage" Width="32" Command="{Binding LanguageChange}" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
+            <MenuItem x:Name="menuLanguage" Width="32" Command="{Binding LanguageChange}" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="2" Margin="2" HorizontalAlignment="Right">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/Resources/Icon/земля.png"/>
                 </MenuItem.Background>
             </MenuItem>
-            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Margin="2" Grid.Column="2" HorizontalAlignment="Right">
+            <MenuItem Width="32" Height="32" Style="{DynamicResource MenuItemStyle}" Margin="2" Grid.Column="3" HorizontalAlignment="Right">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/Resources/Icon/настройки.png"/>
                 </MenuItem.Background>
                 <MenuItem Header="{DynamicResource m_ChangingTheTopic}" Command="{Binding ChangeTheTheme}" />
             </MenuItem>
         </Menu>
-        <Frame Grid.Row="1" Content="TicketSearch" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Fram" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

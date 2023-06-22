@@ -1,13 +1,23 @@
-﻿using SummerPractice2023.Models;
+﻿using SummerPractice2023.DB;
+using SummerPractice2023.DB.Js;
+using SummerPractice2023.Models;
+using SummerPractice2023.Views;
 using SummerPractice2023.Views.User;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace SummerPractice2023.ViewModels
 {
     internal class VMMainWindow : INotifyPropertyChanged
     {
-       
+        ObservableCollection<JsData> jsData { get; set; }
+        public VMMainWindow(ObservableCollection<JsData> jsData)
+        {
+            this.jsData = jsData;
+            this.jsData = CommandJson.GetAir();
+        }
         #region Command
         private RelayCommand _ChangeTheTheme;
         public RelayCommand ChangeTheTheme
@@ -41,25 +51,28 @@ namespace SummerPractice2023.ViewModels
                 {
                     Window? win = obj as Window;
                     SummerPractice2023.Properties.Settings.Default.Reset();
-                    Authorization authorization = new Authorization();
+                    Authorization authorization = new Authorization(jsData);
                     authorization.Show();
                     win.Close();
                 });
             }
         }
 
-        /*
-          private RelayCommand _AuthorizationUser;
-          public RelayCommand AuthorizationUser
-          {
-              get
-              {
-                  return _AuthorizationUser ?? new RelayCommand(obj =>
-                  {
+        private RelayCommand _TicketSearch;
+        public RelayCommand TicketSearch
+        {
+            get
+            {
+                return _TicketSearch ?? new RelayCommand(obj =>
+                {
+                    Window wnd = obj as Window;
+                    Frame block = wnd.FindName("Fram") as Frame;
+                    block.Content = new InfoUser();
 
-                  });
-              }
-          }*/
+         //           block.Content = new TicketSearch(jsData);
+                });
+            }
+        }
         #endregion
 
         public event PropertyChangedEventHandler PropertyChanged;

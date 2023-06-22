@@ -1,41 +1,34 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.Extensions.Logging;
-using SummerPractice2023.DB;
+﻿using SummerPractice2023.DB;
+using SummerPractice2023.DB.Js;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.User;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Xml.Linq;
 
 namespace SummerPractice2023.ViewModels
 {
     internal class UserAR : INotifyPropertyChanged
     {
         #region Variables
-/*        private string _IdUser;
-        public string IdUser
-        {
-            get
-            {
-                return _IdUser;
-            }
-            set
-            {
-                _IdUser = value;
-                NotifyPropertyChanged("IdUser");
-            }
-        }*/
+        ObservableCollection<JsData> jsData { get; set; }
+
+        /*        private string _IdUser;
+                public string IdUser
+                {
+                    get
+                    {
+                        return _IdUser;
+                    }
+                    set
+                    {
+                        _IdUser = value;
+                        NotifyPropertyChanged("IdUser");
+                    }
+                }*/
 
         private string _Lodin;
         public string Lodin
@@ -65,75 +58,75 @@ namespace SummerPractice2023.ViewModels
             }
         }
 
- /*       private string _Image;
-        public string Image
-        {
-            get
-            {
-                return _Image;
-            }
-            set
-            {
-                _Image = value;
-                NotifyPropertyChanged("Image");
-            }
-        }
+        /*       private string _Image;
+               public string Image
+               {
+                   get
+                   {
+                       return _Image;
+                   }
+                   set
+                   {
+                       _Image = value;
+                       NotifyPropertyChanged("Image");
+                   }
+               }
 
-        private string _Name;
-        public string Name
-        {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                _Name = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
+               private string _Name;
+               public string Name
+               {
+                   get
+                   {
+                       return _Name;
+                   }
+                   set
+                   {
+                       _Name = value;
+                       NotifyPropertyChanged("Name");
+                   }
+               }
 
-        private string _Lastname;
-        public string Lastname
-        {
-            get
-            {
-                return _Lastname;
-            }
-            set
-            {
-                _Lastname = value;
-                NotifyPropertyChanged("Lastname");
-            }
-        }
+               private string _Lastname;
+               public string Lastname
+               {
+                   get
+                   {
+                       return _Lastname;
+                   }
+                   set
+                   {
+                       _Lastname = value;
+                       NotifyPropertyChanged("Lastname");
+                   }
+               }
 
-        private string _Surname;
-        public string Surname
-        {
-            get
-            {
-                return _Surname;
-            }
-            set
-            {
-                _Surname = value;
-                NotifyPropertyChanged("Surname");
-            }
-        }
+               private string _Surname;
+               public string Surname
+               {
+                   get
+                   {
+                       return _Surname;
+                   }
+                   set
+                   {
+                       _Surname = value;
+                       NotifyPropertyChanged("Surname");
+                   }
+               }
 
-        private string _Status;
-        public string Status
-        {
-            get
-            {
-                return _Status;
-            }
-            set
-            {
-                _Status = value;
-                NotifyPropertyChanged("Status");
-            }
-        }*/
+               private string _Status;
+               public string Status
+               {
+                   get
+                   {
+                       return _Status;
+                   }
+                   set
+                   {
+                       _Status = value;
+                       NotifyPropertyChanged("Status");
+                   }
+               }*/
         #endregion
         #region Command
         private RelayCommand _RegistrationUser;
@@ -144,7 +137,7 @@ namespace SummerPractice2023.ViewModels
                 return _RegistrationUser ?? new RelayCommand(obj =>
                 {
                     Window? wnd = obj as Window;
-                   
+
                     if (EFCommandModel.GetUser(Lodin) != null)
                     {
                         MessageBox.Show("lodin");
@@ -203,7 +196,7 @@ namespace SummerPractice2023.ViewModels
                     {
                         if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
                         {
-                            MainWindow mainWindow = new MainWindow();
+                            MainWindow mainWindow = new MainWindow(jsData);
                             mainWindow.Show();
                             wnd.Close();
                         }
@@ -239,12 +232,17 @@ namespace SummerPractice2023.ViewModels
         }
         #endregion
 
+        public UserAR(ObservableCollection<JsData> jsData)
+        {
+            this.jsData = jsData;
+            Lodin = "";
+            Password = "";
+        }
         public UserAR()
         {
             Lodin = "";
             Password = "";
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {

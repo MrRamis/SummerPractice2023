@@ -1,15 +1,16 @@
-﻿using SummerPractice2023.ViewModels;
+﻿using SummerPractice2023.DB.Js;
+using SummerPractice2023.ViewModels;
+using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace SummerPractice2023.Views
 {
     public partial class MainWindow : Window
     {
-        VMMainWindow vMMainWindow = new VMMainWindow();
-        public MainWindow()
+        public MainWindow(ObservableCollection<JsData> jsData)
         {
             InitializeComponent();
-            DataContext = vMMainWindow;
+            DataContext = new VMMainWindow(jsData);
         }
     }
 }

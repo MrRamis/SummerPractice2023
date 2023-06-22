@@ -7,5 +7,10 @@
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="MaxLength" Value="100"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </Style.Resources>
     </Style>
 </ResourceDictionary>

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace SummerPractice2023.Models
@@ -25,7 +21,7 @@ namespace SummerPractice2023.Models
                 Uri? uri2 = new Uri("Resources/Topics/dark" + ".xaml", UriKind.Relative);
                 ResourceDictionary? resourceDict2 = Application.LoadComponent(uri2) as ResourceDictionary;
                 Application.Current.Resources.MergedDictionaries.Remove(resourceDict2);
-               // Application.Current.Resources.
+                // Application.Current.Resources.
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             }
             else
@@ -63,10 +59,10 @@ namespace SummerPractice2023.Models
             }
             else
             {
-               /* uri = new Uri("Resources/Topics/light" + ".xaml", UriKind.Relative);
-                ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
-                Application.Current.Resources.Remove("Resources/Topics/dark.xaml");
-                Application.Current.Resources.MergedDictionaries.Add(resourceDict);*/
+                /* uri = new Uri("Resources/Topics/light" + ".xaml", UriKind.Relative);
+                 ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                 Application.Current.Resources.Remove("Resources/Topics/dark.xaml");
+                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);*/
             }
         }
 

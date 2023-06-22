@@ -168,3 +168,7 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.g.cs
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\InfoUser.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\InfoUser.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\UpdateUser.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\User\UpdateUser.baml

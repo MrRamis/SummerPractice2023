@@ -21,6 +21,9 @@
     <Compile Update="Views\User\Authorization.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\User\InfoUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\User\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -65,7 +68,13 @@
     <Page Update="Resources\Languages\lang.ru.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\User\UpdateUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\TicketSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\User\InfoUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\Topics\light.xaml">
