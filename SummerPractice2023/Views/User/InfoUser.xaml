@@ -22,16 +22,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Image Source="https://avatars.githubusercontent.com/u/99258165?v=4" Height="192" Width="192"/>
+                <Image Source="{Binding Image}"  Height="192" Width="192"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
                 <TextBlock Text="{DynamicResource m_name}"/>
-                <TextBlock/>
+                <TextBlock Text="{Binding Name}"/>
                 <TextBlock Text="{DynamicResource m_family}"/>
-                <TextBlock/>
+                <TextBlock Text="{Binding Family}"/>
                 <TextBlock Text="{DynamicResource m_patronymic}"/>
-                <TextBlock/>
+                <TextBlock Text="{Binding Patronymic}"/>
             </StackPanel>
         </Grid>
         

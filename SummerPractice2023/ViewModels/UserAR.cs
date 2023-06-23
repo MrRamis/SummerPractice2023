@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using static System.Net.WebRequestMethods;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -58,75 +59,75 @@ namespace SummerPractice2023.ViewModels
             }
         }
 
-        /*       private string _Image;
-               public string Image
-               {
-                   get
-                   {
-                       return _Image;
-                   }
-                   set
-                   {
-                       _Image = value;
-                       NotifyPropertyChanged("Image");
-                   }
-               }
+        private string _Image;
+        public string Image
+        {
+            get
+            {
+                return _Image;
+            }
+            set
+            {
+                _Image = value;
+                NotifyPropertyChanged("Image");
+            }
+        }
 
-               private string _Name;
-               public string Name
-               {
-                   get
-                   {
-                       return _Name;
-                   }
-                   set
-                   {
-                       _Name = value;
-                       NotifyPropertyChanged("Name");
-                   }
-               }
+        private string _Name;
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                _Name = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
 
-               private string _Lastname;
-               public string Lastname
-               {
-                   get
-                   {
-                       return _Lastname;
-                   }
-                   set
-                   {
-                       _Lastname = value;
-                       NotifyPropertyChanged("Lastname");
-                   }
-               }
+        private string _Family;
+        public string Family
+        {
+            get
+            {
+                return _Family;
+            }
+            set
+            {
+                _Family = value;
+                NotifyPropertyChanged("Family");
+            }
+        }
 
-               private string _Surname;
-               public string Surname
-               {
-                   get
-                   {
-                       return _Surname;
-                   }
-                   set
-                   {
-                       _Surname = value;
-                       NotifyPropertyChanged("Surname");
-                   }
-               }
+        private string _Patronymic;
+        public string Patronymic
+        {
+            get
+            {
+                return _Patronymic;
+            }
+            set
+            {
+                _Patronymic = value;
+                NotifyPropertyChanged("Patronymic");
+            }
+        }
 
-               private string _Status;
-               public string Status
-               {
-                   get
-                   {
-                       return _Status;
-                   }
-                   set
-                   {
-                       _Status = value;
-                       NotifyPropertyChanged("Status");
-                   }
-               }*/
+        private string _Status;
+        public string Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                _Status = value;
+                NotifyPropertyChanged("Status");
+            }
+        }
         #endregion
         #region Command
         private RelayCommand _RegistrationUser;
@@ -234,12 +235,14 @@ namespace SummerPractice2023.ViewModels
 
         public UserAR(ObservableCollection<JsData> jsData)
         {
+            this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
             this.jsData = jsData;
             Lodin = "";
             Password = "";
         }
         public UserAR()
         {
+            this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
             Lodin = "";
             Password = "";
         }

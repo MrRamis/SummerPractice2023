@@ -20,4 +20,7 @@
     <v:String x:Key="m_name">Name</v:String>
     <v:String x:Key="m_family">Family</v:String>
     <v:String x:Key="m_patronymic">Patronymic</v:String>
+
+    <v:String x:Key="m_delete">Delete</v:String>
+    <v:String x:Key="m_saev">Saev</v:String>
 </ResourceDictionary>
