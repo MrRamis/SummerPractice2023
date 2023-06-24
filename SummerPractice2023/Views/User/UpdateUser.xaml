@@ -36,7 +36,6 @@
         <StackPanel Grid.Row="1">
             <Button Content="{DynamicResource m_saev}" Margin="20 4"/>
             <Button Content="{DynamicResource m_delete}" Margin="20 4"/>
-
         </StackPanel>
     </Grid>
 </Page>

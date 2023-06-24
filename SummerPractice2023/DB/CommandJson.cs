@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -130,5 +131,20 @@ namespace SummerPractice2023.DB
             }
             return jsData;
         }
+        public static ObservableCollection<JsData> GetAir(string uri)
+        {
+            using (WebClient wc = new WebClient())
+            {
+                var json = wc.DownloadString(uri);
+                JsFights account = JsonConvert.DeserializeObject<JsFights>(json);
+                ObservableCollection<JsData> jsData = new ObservableCollection<JsData>();
+                foreach (var item in account.data)
+                {
+                    jsData.Add(item);
+                }
+                return jsData;
+            }
+        }
+
     }
 }

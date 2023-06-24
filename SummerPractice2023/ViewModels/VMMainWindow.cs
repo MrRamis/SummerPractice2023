@@ -19,7 +19,7 @@ namespace SummerPractice2023.ViewModels
         public VMMainWindow(ObservableCollection<JsData> jsData)
         {
             this.jsData = jsData;
-            jsData = CommandJson.GetAir();
+           // jsData = CommandJson.GetAir();
             this.updateUser = new UpdateUser();
             this.infoUser = new InfoUser();
             this.ticketSearch = new TicketSearch(jsData);
