@@ -18,13 +18,13 @@
     <Compile Update="Views\TicketSearch.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\User\Authorization.xaml.cs">
+    <Compile Update="Views\UserView\Authorization.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\User\InfoUser.xaml.cs">
+    <Compile Update="Views\UserView\InfoUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\User\Registration.xaml.cs">
+    <Compile Update="Views\UserView\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -71,13 +71,13 @@
     <Page Update="Resources\DictionaryStackPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\User\UpdateUser.xaml">
+    <Page Update="Views\UserView\UpdateUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TicketSearch.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\User\InfoUser.xaml">
+    <Page Update="Views\UserView\InfoUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\Topics\light.xaml">
@@ -89,10 +89,10 @@
     <Page Update="Views\Settings\Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\User\Authorization.xaml">
+    <Page Update="Views\UserView\Authorization.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\User\Registration.xaml">
+    <Page Update="Views\UserView\Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

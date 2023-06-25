@@ -8,7 +8,6 @@
                 <ResourceDictionary Source="Resources/DictionaryButton.xaml"/>
                  <ResourceDictionary Source="Resources/DictionaryTextBlok.xaml"/> 
                   <ResourceDictionary Source="Resources/DictionaryTextBox.xaml"/> 
-                  <ResourceDictionary Source="Resources/DictionaryBorder.xaml"/> 
                   <ResourceDictionary Source="Resources/DictionaryTabControl.xaml"/> 
                  <ResourceDictionary Source="Resources/DictionaryDataGrid.xaml"/> 
                   <ResourceDictionary Source="Resources/DictionaryContextMenu.xaml"/> 

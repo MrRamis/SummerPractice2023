@@ -1,39 +1,41 @@
-﻿<Page x:Class="SummerPractice2023.Views.User.InfoUser"
+﻿<Page x:Class="SummerPractice2023.Views.UserView.UpdateUser"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:SummerPractice2023.Views.User"
+      xmlns:local="clr-namespace:SummerPractice2023.Views.UserView"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="InfoUser">
+      Title="UpdateUser">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Image Source="{Binding Image}"  Height="192" Width="192"/>
+                <Image Source="{Binding Image}" Height="192" Width="192"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
                 <TextBlock Text="{DynamicResource m_name}"/>
-                <TextBlock Text="{Binding Name}"/>
+                <TextBox Text="{Binding Name}"/>
                 <TextBlock Text="{DynamicResource m_family}"/>
-                <TextBlock Text="{Binding Family}"/>
+                <TextBox Text="{Binding Family}"/>
                 <TextBlock Text="{DynamicResource m_patronymic}"/>
-                <TextBlock Text="{Binding Patronymic}"/>
+                <TextBox Text="{Binding Patronymic}"/>
             </StackPanel>
         </Grid>
-        
+        <StackPanel Grid.Row="1">
+            <Button Content="{DynamicResource m_saev}" Margin="20 4"/>
+            <Button Content="{DynamicResource m_delete}" Margin="20 4"/>
+        </StackPanel>
     </Grid>
 </Page>

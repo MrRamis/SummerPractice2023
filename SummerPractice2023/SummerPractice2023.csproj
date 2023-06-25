@@ -56,7 +56,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Update="Views\User\UpdateUser.xaml.cs">
+    <Compile Update="Views\UserView\UpdateUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

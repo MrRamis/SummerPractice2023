@@ -2,7 +2,7 @@
 using SummerPractice2023.DB.Js;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
-using SummerPractice2023.Views.User;
+using SummerPractice2023.Views.UserView;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
@@ -13,10 +13,11 @@ namespace SummerPractice2023.ViewModels
     internal class VMMainWindow : INotifyPropertyChanged
     {
         ObservableCollection<JsData> jsData { get; set; }
+        structV structv;
         UpdateUser updateUser { get; set; }
         InfoUser infoUser { get; set; }
         TicketSearch ticketSearch { get; set; }
-        public VMMainWindow(ObservableCollection<JsData> jsData)
+        public VMMainWindow(structV structV)
         {
             this.jsData = jsData;
            // jsData = CommandJson.GetAir();
@@ -57,7 +58,7 @@ namespace SummerPractice2023.ViewModels
                 {
                     Window? win = obj as Window;
                     SummerPractice2023.Properties.Settings.Default.Reset();
-                    Authorization authorization = new Authorization(jsData);
+                    Authorization authorization = new Authorization(structv);
                     authorization.Show();
                     win.Close();
                 });

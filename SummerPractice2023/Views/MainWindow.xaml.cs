@@ -7,10 +7,10 @@ namespace SummerPractice2023.Views
 {
     public partial class MainWindow : Window
     {
-        public MainWindow(ObservableCollection<JsData> jsData)
+        public MainWindow(structV structV)
         {
             InitializeComponent();
-            DataContext = new VMMainWindow(jsData);
+            DataContext = new VMMainWindow(structV);
         }
     }
 }

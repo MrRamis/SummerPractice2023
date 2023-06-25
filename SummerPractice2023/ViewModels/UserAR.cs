@@ -2,7 +2,7 @@
 using SummerPractice2023.DB.Js;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
-using SummerPractice2023.Views.User;
+using SummerPractice2023.Views.UserView;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
@@ -15,8 +15,6 @@ namespace SummerPractice2023.ViewModels
     internal class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        ObservableCollection<JsData> jsData { get; set; }
-
         /*        private string _IdUser;
                 public string IdUser
                 {
@@ -30,7 +28,7 @@ namespace SummerPractice2023.ViewModels
                         NotifyPropertyChanged("IdUser");
                     }
                 }*/
-
+        structV structv { get; set; }
         private string _Lodin;
         public string Lodin
         {
@@ -197,7 +195,7 @@ namespace SummerPractice2023.ViewModels
                     {
                         if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
                         {
-                            MainWindow mainWindow = new MainWindow(jsData);
+                            MainWindow mainWindow = new MainWindow(structv);
                             mainWindow.Show();
                             wnd.Close();
                         }
@@ -233,10 +231,10 @@ namespace SummerPractice2023.ViewModels
         }
         #endregion
 
-        public UserAR(ObservableCollection<JsData> jsData)
+        public UserAR(structV structV)
         {
+            this.structv = structV;
             this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
-            this.jsData = jsData;
             Lodin = "";
             Password = "";
         }

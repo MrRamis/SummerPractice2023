@@ -26,6 +26,14 @@ namespace SummerPractice2023.DB
             }
         }
 
+        public static void DelettUser(User user)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+              db.Users.Remove(user);
+               
+            }
+        }
         public static User GetUser(string login, string password)
         {
             using (ApplicationContext db = new ApplicationContext())
