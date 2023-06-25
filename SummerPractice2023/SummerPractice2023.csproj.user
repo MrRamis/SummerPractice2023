@@ -32,12 +32,6 @@
     <Resource Update="Resources\Topics\dark.xaml">
       <SubType>Designer</SubType>
     </Resource>
-    <Page Update="Resources\DictionaryBorder.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryButton.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Resources\DictionaryContextMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -53,13 +47,10 @@
     <Page Update="Resources\DictionaryMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\DictionaryState.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\DictionaryTabControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryTextBlok.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Languages\lang.en.xaml">

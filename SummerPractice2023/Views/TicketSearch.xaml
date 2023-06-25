@@ -8,12 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TicketSearch">
 
-    <Grid>
+    <Grid Style="{DynamicResource GridStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Style="{DynamicResource GridStyle}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -27,20 +27,20 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="{DynamicResource m_startCity}" Grid.Row="0" Grid.Column="0"/>
-            <TextBox Grid.Row="1" Grid.Column="0"/>
-            <TextBlock Text="{DynamicResource m_endCity}" Grid.Row="0" Grid.Column="1"/>
-            <TextBox Grid.Row="1" Grid.Column="1"/>
-            <TextBlock Text="{DynamicResource m_startDate}" Grid.Row="0" Grid.Column="2"/>
-            <TextBox Grid.Row="1" Grid.Column="2"/>
-            <TextBlock Text="{DynamicResource m_endDate}" Grid.Row="0" Grid.Column="3"/>
-            <TextBox Grid.Row="1" Grid.Column="3"/>
-            <TextBlock Text="{DynamicResource m_price}" Grid.Row="0" Grid.Column="4"/>
-            <TextBox Grid.Row="1" Grid.Column="4"/>
-            <Button Content="{DynamicResource m_select}" Grid.Row="0" Grid.Column="5"/>
-            <Button Content="{DynamicResource m_clean}" Grid.Row="0" Grid.Column="6"/>
+            <TextBlock Text="{DynamicResource m_startCity}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="0"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_endCity}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="1"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_startDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="2"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_endDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="3"/>
+            <TextBox Grid.Row="1" Grid.Column="3" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBlock Text="{DynamicResource m_price}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="4"/>
+            <TextBox Grid.Row="1" Grid.Column="4" Style="{DynamicResource TextBoxStyle}"/>
+            <Button Content="{DynamicResource m_select}" Style="{DynamicResource ButtonStyle}" Grid.Row="0" Grid.Column="5"/>
+            <Button Content="{DynamicResource m_clean}" Style="{DynamicResource ButtonStyle}" Grid.Row="0" Grid.Column="6"/>
         </Grid>
-        <DataGrid Grid.Row="1" ItemsSource="{Binding jsData}">
+        <DataGrid Grid.Row="1" ItemsSource="{Binding jsData}" Style="{DynamicResource State_DataGrid}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="{DynamicResource m_startCity}" Binding="{Binding startCity}"/>
                 <DataGridTextColumn Header="{DynamicResource m_endCity}" Binding="{Binding endCity}"/>
