@@ -65,16 +65,12 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\SummerPractice2023.csproj.CopyComplete
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.dll.config
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryBorder.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryButton.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryContextMenu.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryDataGrid.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryGrid.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryImade.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryMenu.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTabControl.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBlok.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTextBox.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.en.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.exe
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.dll.config
@@ -175,3 +171,4 @@ D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\U
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\UserView\Registration.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\UserView\UpdateUser.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryState.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryState.baml

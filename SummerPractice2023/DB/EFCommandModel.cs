@@ -1,6 +1,7 @@
 ﻿using SummerPractice2023.DB.Tables;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,13 +26,30 @@ namespace SummerPractice2023.DB
                 db.SaveChanges();
             }
         }
-
+        public static void UpdateUser(User user)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                // Редактирование
+                User userN = GetUserId(user.IdUser);
+                if (userN != null)
+                {
+                    userN.Name = user.Name;
+                    userN.Status = user.Status;
+                    userN.Surname = user.Surname;
+                    userN.Lodin = user.Lodin;
+                    userN.Password = user.Password;
+                    userN.Lastname = user.Lastname;
+                }
+                db.SaveChanges();
+            }
+        }
         public static void DelettUser(User user)
         {
             using (ApplicationContext db = new ApplicationContext())
             {
               db.Users.Remove(user);
-               
+                db.SaveChanges();
             }
         }
         public static User GetUser(string login, string password)

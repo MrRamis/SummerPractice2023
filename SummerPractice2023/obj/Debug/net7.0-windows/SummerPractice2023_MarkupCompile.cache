@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\
 SummerPractice2023
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
 17-134933533
 
 26-25815029
-227-94092298
+2271680919075
 Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryImade.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryStackPanel.xaml;Resources\DictionaryState.xaml;Resources\DictionaryTabControl.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\UserView\Authorization.xaml;Views\UserView\InfoUser.xaml;Views\UserView\Registration.xaml;Views\UserView\UpdateUser.xaml;
 
 False
