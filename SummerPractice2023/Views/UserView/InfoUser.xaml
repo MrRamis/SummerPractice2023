@@ -26,14 +26,13 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1">
-                <TextBlock Text="{DynamicResource m_name}"/>
-                <TextBlock Text="{Binding Name}"/>
-                <TextBlock Text="{DynamicResource m_family}"/>
-                <TextBlock Text="{Binding Family}"/>
-                <TextBlock Text="{DynamicResource m_patronymic}"/>
-                <TextBlock Text="{Binding Patronymic}"/>
+                <TextBlock Text="{DynamicResource m_name}" Style="{DynamicResource State_TextBlock}"/>
+                <TextBlock Text="{Binding Name}" Style="{DynamicResource State_TextBlock}"/>
+                <TextBlock Text="{DynamicResource m_family}" Style="{DynamicResource State_TextBlock}"/>
+                <TextBlock Text="{Binding Family}" Style="{DynamicResource State_TextBlock}"/>
+                <TextBlock Text="{DynamicResource m_patronymic}" Style="{DynamicResource State_TextBlock}"/>
+                <TextBlock Text="{Binding Patronymic}" Style="{DynamicResource State_TextBlock}"/>
             </StackPanel>
         </Grid>
-        
     </Grid>
 </Page>

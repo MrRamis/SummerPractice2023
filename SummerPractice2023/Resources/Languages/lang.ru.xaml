@@ -22,4 +22,11 @@
 
     <v:String x:Key="m_delete">Удалить</v:String>
     <v:String x:Key="m_saev">Сохранить</v:String>
+
+    <v:String x:Key="m_flights">Авиабилеты</v:String>
+
+    <v:String x:Key="m_profileSettings">Настройки профиля</v:String>
+    <v:String x:Key="m_profile">Профиль</v:String>
+
+
 </ResourceDictionary>

@@ -26,14 +26,14 @@
                     </Grid>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Grid.Column="0" Header="dd" Command="{Binding TicketSearch}" CommandParameter="{Binding ElementName=MainWindowX}"/>
+            <MenuItem Grid.Column="0" Header="{DynamicResource m_flights}" Command="{Binding TicketSearch}" CommandParameter="{Binding ElementName=MainWindowX}"/>
 
             <MenuItem Width="32" Height="32" CommandParameter="{Binding ElementName=MainWindowX}" Style="{DynamicResource MenuItemStyle}" Grid.Column="1" Margin="2" HorizontalAlignment="Right">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="/Resources/Icon/человек.png"/>
                 </MenuItem.Background>
-                <MenuItem Header="Профиль" Command="{Binding InfoUser}" CommandParameter="{Binding ElementName=MainWindowX}"/>
-                <MenuItem Header="Настройки" Command="{Binding UpdateUser}" CommandParameter="{Binding ElementName=MainWindowX}"/>
+                <MenuItem Header="{DynamicResource m_profile}" Command="{Binding InfoUser}" CommandParameter="{Binding ElementName=MainWindowX}"/>
+                <MenuItem Header="{DynamicResource m_profileSettings}" Command="{Binding UpdateUser}" CommandParameter="{Binding ElementName=MainWindowX}"/>
                 <MenuItem Header="{DynamicResource m_Exit}" Command="{Binding EndUser}" CommandParameter="{x:Reference Name= MainWindowX}"/>
             </MenuItem>
             <MenuItem x:Name="menuLanguage" Width="32" Command="{Binding LanguageChange}" Height="32" Style="{DynamicResource MenuItemStyle}" Grid.Column="2" Margin="2" HorizontalAlignment="Right">

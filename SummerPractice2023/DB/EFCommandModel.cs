@@ -1,12 +1,7 @@
 ﻿using SummerPractice2023.DB.Tables;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Documents;
 
 namespace SummerPractice2023.DB
 {
@@ -48,7 +43,7 @@ namespace SummerPractice2023.DB
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-              db.Users.Remove(user);
+                db.Users.Remove(user);
                 db.SaveChanges();
             }
         }
@@ -57,14 +52,14 @@ namespace SummerPractice2023.DB
             using (ApplicationContext db = new ApplicationContext())
             {
                 var user = db.Users.FirstOrDefault(p => p.Lodin == login && p.Password == password);
-               if (user != null)
+                if (user != null)
                 {
                     SummerPractice2023.Properties.Settings.Default.UserId = user.IdUser;
                     SummerPractice2023.Properties.Settings.Default.Save();
                     return user;
-               }
+                }
                 else
-                  return null;
+                    return null;
             }
         }
         public static User GetUserId(string Id)
@@ -79,7 +74,7 @@ namespace SummerPractice2023.DB
         public static User GetUser(string login)
         {
             using (ApplicationContext db = new ApplicationContext())
-            { 
+            {
                 User user = null;
                 user = db.Users.FirstOrDefault(p => p.Lodin == login);
                 return user;

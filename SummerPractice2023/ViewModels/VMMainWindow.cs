@@ -17,13 +17,12 @@ namespace SummerPractice2023.ViewModels
         UpdateUser updateUser { get; set; }
         InfoUser infoUser { get; set; }
         TicketSearch ticketSearch { get; set; }
-        public VMMainWindow(structV structV)
+        public VMMainWindow(structV structv)
         {
             this.jsData = jsData;
-           // jsData = CommandJson.GetAir();
             this.updateUser = new UpdateUser();
             this.infoUser = new InfoUser();
-            this.ticketSearch = new TicketSearch(jsData);
+            this.ticketSearch = new TicketSearch(structv);
         }
         #region Command
         private RelayCommand _ChangeTheTheme;

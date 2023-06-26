@@ -20,10 +20,10 @@ namespace SummerPractice2023.Views
 {
     public partial class TicketSearch : Page
     {
-        public TicketSearch(ObservableCollection<JsData> jsData)
+        public TicketSearch(structV structv)
         {
             InitializeComponent();
-            DataContext = new VMTicketSearch(jsData);
+            DataContext = new VMTicketSearch(structv);
         }
     }
 }
