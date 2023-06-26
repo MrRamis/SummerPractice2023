@@ -19,7 +19,7 @@ namespace SummerPractice2023.ViewModels
         TicketSearch ticketSearch { get; set; }
         public VMMainWindow(structV structv)
         {
-            this.jsData = jsData;
+            this.jsData = structv.jsData;
             this.updateUser = new UpdateUser();
             this.infoUser = new InfoUser();
             this.ticketSearch = new TicketSearch(structv);

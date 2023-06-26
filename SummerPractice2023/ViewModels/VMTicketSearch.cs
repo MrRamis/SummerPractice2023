@@ -22,12 +22,24 @@ namespace SummerPractice2023.ViewModels
         {
             this.jsData = structv.jsData;
             this.structv = structv;
-
             LogEntriesStoreView = CollectionViewSource.GetDefaultView(jsData);
+            
 
         }
 
-
+/*        public bool ActorsFilter(object sender)
+        {
+            var obj = sender as ViewModelMovies;
+            if (obj != null)
+            {
+                foreach (var item in obj.MoviesActors)
+                {
+                    if (item.ToString().Contains(Actors))
+                        return true;
+                }
+            }
+            return false;
+        }*/
 
 
 
