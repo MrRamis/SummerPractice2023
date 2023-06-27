@@ -22,6 +22,7 @@
 
     <v:String x:Key="m_delete">Удалить</v:String>
     <v:String x:Key="m_saev">Сохранить</v:String>
+    <v:String x:Key="m_update">Обновить</v:String>
 
     <v:String x:Key="m_flights">Авиабилеты</v:String>
 

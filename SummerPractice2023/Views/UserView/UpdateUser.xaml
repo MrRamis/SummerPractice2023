@@ -25,12 +25,12 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1">
-                <TextBlock Text="{DynamicResource m_name}" Style="{DynamicResource State_TextBlock}"/>
-                <TextBox Text="{Binding Name}" Style="{DynamicResource State_TextBox}"/>
-                <TextBlock Text="{DynamicResource m_family}" Style="{DynamicResource State_TextBlock}"/>
-                <TextBox Text="{Binding Family}" Style="{DynamicResource State_TextBox}"/>
-                <TextBlock Text="{DynamicResource m_patronymic}" Style="{DynamicResource State_TextBlock}"/>
-                <TextBox Text="{Binding Patronymic}" Style="{DynamicResource State_TextBox}"/>
+                <TextBlock Text="{DynamicResource m_name}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Name}" Style="{DynamicResource TextBoxStyle}"/>
+                <TextBlock Text="{DynamicResource m_family}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Family}" Style="{DynamicResource TextBoxStyle}"/>
+                <TextBlock Text="{DynamicResource m_patronymic}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Patronymic}" Style="{DynamicResource TextBoxStyle}"/>
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1">

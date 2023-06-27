@@ -28,17 +28,19 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="{DynamicResource m_startCity}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="0"/>
-            <TextBox Grid.Row="1" Grid.Column="0" Style="{DynamicResource TextBoxStyle}"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding StartCity}" Style="{DynamicResource TextBoxStyle}"/>
             <TextBlock Text="{DynamicResource m_endCity}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="1"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Style="{DynamicResource TextBoxStyle}"/>
-            <TextBlock Text="{DynamicResource m_startDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="2"/>
-            <TextBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"/>
-            <TextBlock Text="{DynamicResource m_endDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="3"/>
-            <TextBox Grid.Row="1" Grid.Column="3" Style="{DynamicResource TextBoxStyle}"/>
-            <TextBlock Text="{DynamicResource m_price}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="4"/>
-            <TextBox Grid.Row="1" Grid.Column="4" Style="{DynamicResource TextBoxStyle}"/>
-            <Button Content="{DynamicResource m_select}" Style="{DynamicResource ButtonStyle}" Grid.Row="0" Grid.Column="5"/>
-            <Button Content="{DynamicResource m_clean}" Style="{DynamicResource ButtonStyle}" Grid.Row="0" Grid.Column="6"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EndCity}" Style="{DynamicResource TextBoxStyle}"/>
+            <!--<TextBlock Text="{DynamicResource m_startDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="2"/>-->
+            <!--  <TextBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"/> -->
+            <!-- <TextBlock Text="{DynamicResource m_endDate}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="3"/> -->
+            <!-- <TextBox Grid.Row="1" Grid.Column="3" Style="{DynamicResource TextBoxStyle}"/> -->
+            <!-- <TextBlock Text="{DynamicResource m_price}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="4"/> -->
+            <!--<TextBox Grid.Row="1" Grid.Column="4" Style="{DynamicResource TextBoxStyle}"-->
+            <Button Content="{DynamicResource m_select}" Style="{DynamicResource ButtonStyle}" Command="{Binding Select}" Grid.Row="0" Grid.Column="4"/>
+            <Button Content="{DynamicResource m_clean}" Style="{DynamicResource ButtonStyle}" Command="{Binding Clean}" Grid.Row="0" Grid.Column="5"/>
+            <Button Content="{DynamicResource m_update}" Style="{DynamicResource ButtonStyle}" Command="{Binding Update}" Grid.Row="0" Grid.Column="6"/>
+
         </Grid>
         <DataGrid Grid.Row="1" ItemsSource="{Binding LogEntriesStoreView}" Style="{DynamicResource State_DataGrid}">
             <DataGrid.Columns>

@@ -16,8 +16,7 @@ namespace SummerPractice2023
             {
                 jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV")
             };
-            Resource.PastTopic();
-            Resource.LanguageChange();
+
             if (SummerPractice2023.Properties.Settings.Default.UserId == "")
             {
                  Views.UserView.Authorization authorization = new Views.UserView.Authorization(structv);
@@ -29,6 +28,8 @@ namespace SummerPractice2023
                 MainWindow mainWindow = new MainWindow(structv);
                 mainWindow.Show();
             }
+            //   Resource.PastTopic();
+             Resource.LanguageChange();
         }
     }
 }

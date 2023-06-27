@@ -23,6 +23,7 @@
 
     <v:String x:Key="m_delete">Delete</v:String>
     <v:String x:Key="m_saev">Saev</v:String>
+    <v:String x:Key="m_update">Update</v:String>
 
     <v:String x:Key="m_flights">Flights</v:String>
     <v:String x:Key="m_profileSettings">Profile settings</v:String>
