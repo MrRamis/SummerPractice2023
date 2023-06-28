@@ -20,12 +20,13 @@ namespace SummerPractice2023.ViewModels
         TicketSearch ticketSearch { get; set; }
         public VMMainWindow(structV structv, Window wnd)
         {
+            UserAR userAR = new UserAR(structv);
             this.structv = structv;
             this.jsData = structv.jsData;
             this.frame = wnd.FindName("Fram") as Frame; 
-            this.updateUser = new UpdateUser(structv);
-            this.infoUser = new InfoUser(structv);
-            this.ticketSearch = new TicketSearch(structv);
+            this.updateUser = new UpdateUser(this.structv, userAR);
+            this.infoUser = new InfoUser(this.structv, userAR);
+            this.ticketSearch = new TicketSearch(this.structv);
             this.frame.Content = this.infoUser;
         }
         #region Command

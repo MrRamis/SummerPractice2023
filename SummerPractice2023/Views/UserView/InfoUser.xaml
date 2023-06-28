@@ -36,7 +36,7 @@
                 <TextBlock Text="{DynamicResource m_name}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBlock Text="{Binding Name}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBlock Text="{DynamicResource m_surname}" Style="{DynamicResource TextBlockStyle}"/>
-                <TextBlock Text="{Binding Family}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBlock Text="{Binding Surname}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBlock Text="{DynamicResource m_patronymic}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBlock Text="{Binding Patronymic}" Style="{DynamicResource TextBlockStyle}"/>
             </StackPanel>

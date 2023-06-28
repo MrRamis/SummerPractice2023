@@ -36,6 +36,7 @@ namespace SummerPractice2023.DB
                     userN.Login = user.Login;
                     userN.Password = user.Password;
                     userN.Patronymic = user.Patronymic;
+                    userN.Image = user.Image;
                 }
                 db.SaveChanges();
                 return userN;

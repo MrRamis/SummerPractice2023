@@ -1,19 +1,16 @@
 ﻿using SummerPractice2023.DB;
-using SummerPractice2023.DB.Js;
 using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.UserView;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using static System.Net.WebRequestMethods;
 
 namespace SummerPractice2023.ViewModels
 {
-    internal class UserAR : INotifyPropertyChanged
+    public class UserAR : INotifyPropertyChanged
     {
         #region Variables
         public User User
@@ -52,7 +49,7 @@ namespace SummerPractice2023.ViewModels
             }
             set
             {
-                _Password = value;
+                _Password = Hash.hashPassword(value);
                 NotifyPropertyChanged("Password");
             }
         }
@@ -190,7 +187,7 @@ namespace SummerPractice2023.ViewModels
                 {
                     User user = structv.User;
                     user.Status = Status;
-                    structv.User= EFCommandModel.UpdateUser(user);
+                    structv.User = EFCommandModel.UpdateUser(user);
                 });
             }
         }
@@ -216,7 +213,7 @@ namespace SummerPractice2023.ViewModels
                     User user = structv.User;
                     user.Status = Status;
                     user.Image = Image;
-                    user.Login = Lodin ;
+                    user.Login = Lodin;
                     user.Password = Password;
                     user.Name = Name;
                     user.Surname = Surname;
