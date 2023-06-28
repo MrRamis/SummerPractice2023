@@ -49,7 +49,6 @@ namespace SummerPractice2023.ViewModels
                 NotifyPropertyChanged("EndCity");
             }
         }
-
         public VMTicketSearch(structV structv)
         {
             this.jsData = structv.jsData;
@@ -57,10 +56,7 @@ namespace SummerPractice2023.ViewModels
             LogEntriesStoreView = CollectionViewSource.GetDefaultView(structv.jsData);
             this.StartCity = "";
             this.EndCity = "";
-
         }
-
-
 
         #region Command
         private RelayCommand _Select;
@@ -96,8 +92,6 @@ namespace SummerPractice2023.ViewModels
             {
                 return _Update ?? new RelayCommand(obj =>
                 {
-
-
                     StartCity = "";
                     EndCity = "";
                     LogEntriesStoreView.Filter = Filter;
@@ -109,6 +103,7 @@ namespace SummerPractice2023.ViewModels
             }
         }
         #endregion
+
         #region Filter
         public bool Filter(object sender)
         {
@@ -159,6 +154,7 @@ namespace SummerPractice2023.ViewModels
             return false;
         }
         #endregion
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)

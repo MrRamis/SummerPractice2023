@@ -10,7 +10,8 @@ namespace SummerPractice2023.Views
         public MainWindow(structV structV)
         {
             InitializeComponent();
-            DataContext = new VMMainWindow(structV);
+           
+            DataContext = new VMMainWindow(structV, this.MainWindowX);
         }
     }
 }

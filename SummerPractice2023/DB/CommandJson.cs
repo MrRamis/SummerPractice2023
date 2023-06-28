@@ -1,17 +1,15 @@
 ﻿using Newtonsoft.Json;
 using SummerPractice2023.DB.Js;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.NetworkInformation;
 
 namespace SummerPractice2023.DB
 {
     public class CommandJson
-    {   
+    {
         public static ObservableCollection<JsData> GetAir()
         {
             string json = @"
@@ -125,7 +123,7 @@ namespace SummerPractice2023.DB
 
             JsFights account = JsonConvert.DeserializeObject<JsFights>(json);
             ObservableCollection<JsData> jsData = new ObservableCollection<JsData>();
-            foreach(var  item in account.data)
+            foreach (var item in account.data)
             {
                 jsData.Add(item);
             }
@@ -133,17 +131,59 @@ namespace SummerPractice2023.DB
         }
         public static ObservableCollection<JsData> GetAir(string uri)
         {
-            using (WebClient wc = new WebClient())
+            ObservableCollection<JsData> jsData = new ObservableCollection<JsData>();
+            if (CheckForInternetConnection())
             {
-                var json = wc.DownloadString(uri);
-                JsFights account = JsonConvert.DeserializeObject<JsFights>(json);
-                ObservableCollection<JsData> jsData = new ObservableCollection<JsData>();
-                foreach (var item in account.data)
+                using (WebClient wc = new WebClient())
                 {
-                    jsData.Add(item);
+                    var json = wc.DownloadString(uri);
+                    JsFights account = JsonConvert.DeserializeObject<JsFights>(json);
+                    foreach (var item in account.data)
+                    {
+                        jsData.Add(item);
+                    }
                 }
-                return jsData;
             }
+            return jsData;
+        }
+        public static bool CheckForInternetConnection(int timeoutMs = 10000, string url = null)
+        {
+            try
+            {
+                url ??= CultureInfo.InstalledUICulture switch
+                {
+                    { Name: var n } when n.StartsWith("fa") => // Iran
+                        "http://www.aparat.com",
+                    { Name: var n } when n.StartsWith("zh") => // China
+                        "http://www.baidu.com",
+                    _ =>
+                        "http://www.gstatic.com/generate_204",
+                };
+
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                request.KeepAlive = false;
+                request.Timeout = timeoutMs;
+                using (var response = (HttpWebResponse)request.GetResponse())
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private static bool NetworkIsAvailable()
+        {
+            // only recognizes changes related to Internet adapters
+            if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable()) return false;
+
+            // however, this will include all adapters -- filter by opstatus and activity
+            NetworkInterface[] interfaces = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces();
+            return (from face in interfaces
+                    where face.OperationalStatus == OperationalStatus.Up
+                    where (face.NetworkInterfaceType != NetworkInterfaceType.Tunnel) && (face.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                    where (!(face.Name.ToLower().Contains("virtual") || face.Description.ToLower().Contains("virtual")))
+                    select face.GetIPv4Statistics()).Any(statistics => (statistics.BytesReceived > 0) && (statistics.BytesSent > 0));
+
         }
 
     }

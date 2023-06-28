@@ -14,15 +14,19 @@ namespace SummerPractice2023.ViewModels
     {
         ObservableCollection<JsData> jsData { get; set; }
         structV structv;
+        Frame frame { get; set; }
         UpdateUser updateUser { get; set; }
         InfoUser infoUser { get; set; }
         TicketSearch ticketSearch { get; set; }
-        public VMMainWindow(structV structv)
+        public VMMainWindow(structV structv, Window wnd)
         {
+            this.structv = structv;
             this.jsData = structv.jsData;
+            this.frame = wnd.FindName("Fram") as Frame; 
             this.updateUser = new UpdateUser();
             this.infoUser = new InfoUser();
             this.ticketSearch = new TicketSearch(structv);
+            this.frame.Content = this.infoUser;
         }
         #region Command
         private RelayCommand _ChangeTheTheme;
@@ -71,9 +75,7 @@ namespace SummerPractice2023.ViewModels
             {
                 return _TicketSearch ?? new RelayCommand(obj =>
                 {
-                    Window wnd = obj as Window;
-                    Frame block = wnd.FindName("Fram") as Frame;
-                    block.Content = ticketSearch;
+                    frame.Content = ticketSearch;
                 });
             }
         }
@@ -84,9 +86,7 @@ namespace SummerPractice2023.ViewModels
             {
                 return _UpdateUser ?? new RelayCommand(obj =>
                 {
-                    Window wnd = obj as Window;
-                    Frame block = wnd.FindName("Fram") as Frame;
-                    block.Content = updateUser;
+                    frame.Content = updateUser;
                 });
             }
         }
@@ -97,9 +97,7 @@ namespace SummerPractice2023.ViewModels
             {
                 return _InfoUser ?? new RelayCommand(obj =>
                 {
-                    Window? wnd = obj as Window;
-                    Frame? block = (Frame)wnd.FindName("Fram");
-                    block.Content = infoUser;
+                    frame.Content = infoUser;
                 });
             }
         }
