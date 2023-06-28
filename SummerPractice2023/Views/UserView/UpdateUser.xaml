@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:SummerPractice2023.Views.UserView"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      x:Name="updateUser"
       Title="UpdateUser">
 
     <Grid>
@@ -22,20 +23,37 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <Image Source="{Binding Image}" Height="192" Width="192"/>
+                <WrapPanel HorizontalAlignment="Center">
+                    <TextBox Text="{Binding Status}" Style="{DynamicResource TextBoxStyle}" Width="192" VerticalAlignment="Center"/>
+                    <Button Height="32" Width="32" Command="{Binding UpdateStatus}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Resources/Icon/Status.png"/>
+                        </Button.Background>
+                    </Button>
+                </WrapPanel>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
                 <TextBlock Text="{DynamicResource m_name}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBox Text="{Binding Name}" Style="{DynamicResource TextBoxStyle}"/>
-                <TextBlock Text="{DynamicResource m_family}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBlock Text="{DynamicResource m_surname}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBox Text="{Binding Family}" Style="{DynamicResource TextBoxStyle}"/>
                 <TextBlock Text="{DynamicResource m_patronymic}" Style="{DynamicResource TextBlockStyle}"/>
                 <TextBox Text="{Binding Patronymic}" Style="{DynamicResource TextBoxStyle}"/>
             </StackPanel>
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="{DynamicResource m_Login}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Lodin}" Style="{DynamicResource TextBoxStyle}"/>
+                <TextBlock Text="{DynamicResource m_Password}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Password}" Style="{DynamicResource TextBoxStyle}"/>
+                <TextBlock Text="{DynamicResource m_image}" Style="{DynamicResource TextBlockStyle}"/>
+                <TextBox Text="{Binding Image}" Style="{DynamicResource TextBoxStyle}"/>
+            </StackPanel>
+
         </Grid>
         <StackPanel Grid.Row="1">
-            <Button Content="{DynamicResource m_saev}" Margin="20 4" Style="{DynamicResource State_Button}"/>
-            <Button Content="{DynamicResource m_delete}" Margin="20 4" Style="{DynamicResource State_Button}"/>
+            <Button Command="{Binding UpdateUser}" Content="{DynamicResource m_saev}" Margin="20 4" Style="{DynamicResource State_Button}"/>
+            <Button Command="{Binding DeleteUser}" CommandParameter="{x:Reference Name=updateUser}"  Content="{DynamicResource m_delete}" Margin="20 4" Style="{DynamicResource State_Button}"/>
         </StackPanel>
     </Grid>
 </Page>

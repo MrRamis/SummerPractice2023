@@ -1,5 +1,6 @@
 ﻿using SummerPractice2023.DB;
 using SummerPractice2023.DB.Js;
+using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.UserView;
@@ -15,20 +16,19 @@ namespace SummerPractice2023.ViewModels
     internal class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        /*        private string _IdUser;
-                public string IdUser
-                {
-                    get
-                    {
-                        return _IdUser;
-                    }
-                    set
-                    {
-                        _IdUser = value;
-                        NotifyPropertyChanged("IdUser");
-                    }
-                }*/
-        structV structv { get; set; }
+        public User User
+        {
+            get
+            {
+                return structv.User;
+            }
+            set
+            {
+                structv.User = value;
+                NotifyPropertyChanged("User");
+            }
+        }
+        structV structv;
         private string _Lodin;
         public string Lodin
         {
@@ -86,7 +86,7 @@ namespace SummerPractice2023.ViewModels
         }
 
         private string _Family;
-        public string Family
+        public string Surname
         {
             get
             {
@@ -95,7 +95,7 @@ namespace SummerPractice2023.ViewModels
             set
             {
                 _Family = value;
-                NotifyPropertyChanged("Family");
+                NotifyPropertyChanged("Surname");
             }
         }
 
@@ -181,7 +181,50 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
-
+        private RelayCommand _UpdateStatus;
+        public RelayCommand UpdateStatus
+        {
+            get
+            {
+                return _UpdateStatus ?? new RelayCommand(obj =>
+                {
+                    User user = structv.User;
+                    user.Status = Status;
+                    structv.User= EFCommandModel.UpdateUser(user);
+                });
+            }
+        }
+        private RelayCommand _DeleteUser;
+        public RelayCommand DeleteUser
+        {
+            get
+            {
+                return _DeleteUser ?? new RelayCommand(obj =>
+                {
+                    EFCommandModel.DelettUser(structv.User);
+                    SummerPractice2023.Properties.Settings.Default.Reset();
+                });
+            }
+        }
+        private RelayCommand _UpdateUser;
+        public RelayCommand UpdateUser
+        {
+            get
+            {
+                return _UpdateUser ?? new RelayCommand(obj =>
+                {
+                    User user = structv.User;
+                    user.Status = Status;
+                    user.Image = Image;
+                    user.Login = Lodin ;
+                    user.Password = Password;
+                    user.Name = Name;
+                    user.Surname = Surname;
+                    user.Patronymic = Patronymic;
+                    structv.User = EFCommandModel.UpdateUser(user);
+                });
+            }
+        }
         private RelayCommand _AuthorizationUser;
         public RelayCommand AuthorizationUser
         {
@@ -233,13 +276,19 @@ namespace SummerPractice2023.ViewModels
 
         public UserAR(structV structV)
         {
+            this.Status = "";
             this.structv = structV;
-            this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
-            Lodin = "";
-            Password = "";
+            this.Image = structV.User.Image;
+            this.Lodin = structV.User.Login;
+            this.Password = structV.User.Password;
+            this.Status = structV.User.Status;
+            this.Name = structV.User.Name;
+            this.Surname = structV.User.Surname;
+            this.Patronymic = structV.User.Patronymic;
         }
         public UserAR()
         {
+            this.Status = "";
             this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
             Lodin = "";
             Password = "";

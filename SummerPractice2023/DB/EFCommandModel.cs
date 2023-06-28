@@ -12,7 +12,7 @@ namespace SummerPractice2023.DB
             User user = new User()
             {
                 IdUser = Convert.ToString(Guid.NewGuid()),
-                Lodin = login,
+                Login = login,
                 Password = password
             };
             using (ApplicationContext db = new ApplicationContext())
@@ -21,22 +21,24 @@ namespace SummerPractice2023.DB
                 db.SaveChanges();
             }
         }
-        public static void UpdateUser(User user)
+        public static User UpdateUser(User user)
         {
             using (ApplicationContext db = new ApplicationContext())
             {
                 // Редактирование
                 User userN = GetUserId(user.IdUser);
+                db.Attach(userN);
                 if (userN != null)
                 {
                     userN.Name = user.Name;
                     userN.Status = user.Status;
                     userN.Surname = user.Surname;
-                    userN.Lodin = user.Lodin;
+                    userN.Login = user.Login;
                     userN.Password = user.Password;
-                    userN.Lastname = user.Lastname;
+                    userN.Patronymic = user.Patronymic;
                 }
                 db.SaveChanges();
+                return userN;
             }
         }
         public static void DelettUser(User user)
@@ -51,7 +53,7 @@ namespace SummerPractice2023.DB
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                var user = db.Users.FirstOrDefault(p => p.Lodin == login && p.Password == password);
+                var user = db.Users.FirstOrDefault(p => p.Login == login && p.Password == password);
                 if (user != null)
                 {
                     SummerPractice2023.Properties.Settings.Default.UserId = user.IdUser;
@@ -76,7 +78,7 @@ namespace SummerPractice2023.DB
             using (ApplicationContext db = new ApplicationContext())
             {
                 User user = null;
-                user = db.Users.FirstOrDefault(p => p.Lodin == login);
+                user = db.Users.FirstOrDefault(p => p.Login == login);
                 return user;
             }
         }

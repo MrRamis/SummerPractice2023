@@ -16,18 +16,20 @@
     <v:String x:Key="m_select">Выбрать</v:String>
     <v:String x:Key="m_clean">Очистить</v:String>
 
+    <v:String x:Key="m_image">Изоброжение</v:String>
+    
     <v:String x:Key="m_name">Имя</v:String>
-    <v:String x:Key="m_family">Фамилие</v:String>
+    <v:String x:Key="m_surname">Фамилие</v:String>
     <v:String x:Key="m_patronymic">Отчество</v:String>
 
     <v:String x:Key="m_delete">Удалить</v:String>
     <v:String x:Key="m_saev">Сохранить</v:String>
     <v:String x:Key="m_update">Обновить</v:String>
 
+    <v:String x:Key="m_status">Статус</v:String>
+    
     <v:String x:Key="m_flights">Авиабилеты</v:String>
 
     <v:String x:Key="m_profileSettings">Настройки профиля</v:String>
     <v:String x:Key="m_profile">Профиль</v:String>
-
-
 </ResourceDictionary>

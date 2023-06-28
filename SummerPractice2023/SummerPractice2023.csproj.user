@@ -41,9 +41,6 @@
     <Page Update="Resources\DictionaryGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DictionaryImade.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Resources\DictionaryMenu.xaml">
       <SubType>Designer</SubType>
     </Page>

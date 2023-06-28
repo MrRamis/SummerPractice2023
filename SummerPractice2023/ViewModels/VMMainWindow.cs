@@ -23,8 +23,8 @@ namespace SummerPractice2023.ViewModels
             this.structv = structv;
             this.jsData = structv.jsData;
             this.frame = wnd.FindName("Fram") as Frame; 
-            this.updateUser = new UpdateUser();
-            this.infoUser = new InfoUser();
+            this.updateUser = new UpdateUser(structv);
+            this.infoUser = new InfoUser(structv);
             this.ticketSearch = new TicketSearch(structv);
             this.frame.Content = this.infoUser;
         }

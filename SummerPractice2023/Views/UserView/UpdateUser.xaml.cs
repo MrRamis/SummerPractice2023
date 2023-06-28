@@ -5,9 +5,9 @@ namespace SummerPractice2023.Views.UserView
 {
     public partial class UpdateUser : Page
     {
-        public UpdateUser()
+        public UpdateUser(structV structv)
         {
-            DataContext = new UserAR();
+            DataContext = new UserAR(structv);
             InitializeComponent();
         }
     }

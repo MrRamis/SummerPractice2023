@@ -14,7 +14,8 @@ namespace SummerPractice2023
             //https://pastebin.com/raw/BhAvx5UV
             structv = new structV
             {
-                jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV")
+                jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV"),
+                User = new DB.Tables.User()
             };
 
             if (SummerPractice2023.Properties.Settings.Default.UserId == "")

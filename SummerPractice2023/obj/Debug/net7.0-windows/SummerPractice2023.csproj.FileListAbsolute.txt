@@ -68,7 +68,6 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryContextMenu.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryDataGrid.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryGrid.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryImade.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryMenu.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTabControl.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.en.baml

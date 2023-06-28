@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icon\Status.png" />
     <None Remove="Resources\Icon\земля.png" />
     <None Remove="Resources\Icon\настройки.png" />
     <None Remove="Resources\Icon\человек.png" />
@@ -38,6 +39,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Icon\Status.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Icon\земля.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

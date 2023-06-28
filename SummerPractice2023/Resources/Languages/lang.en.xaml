@@ -17,19 +17,20 @@
     <v:String x:Key="m_select">Select</v:String>
     <v:String x:Key="m_clean">Clean</v:String>
 
+    <v:String x:Key="m_image">Image</v:String>
+
     <v:String x:Key="m_name">Name</v:String>
-    <v:String x:Key="m_family">Family</v:String>
+    <v:String x:Key="m_surname">Surname</v:String>
     <v:String x:Key="m_patronymic">Patronymic</v:String>
 
     <v:String x:Key="m_delete">Delete</v:String>
     <v:String x:Key="m_saev">Saev</v:String>
     <v:String x:Key="m_update">Update</v:String>
 
+    <v:String x:Key="m_status">Status</v:String>
+
     <v:String x:Key="m_flights">Flights</v:String>
     <v:String x:Key="m_profileSettings">Profile settings</v:String>
     <v:String x:Key="m_profile">Profile</v:String>
-
-
-
 
 </ResourceDictionary>
