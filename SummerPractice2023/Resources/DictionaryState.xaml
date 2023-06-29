@@ -57,4 +57,45 @@
         </Style.Resources>
     </Style>
 
+    <Style TargetType="ListBox" x:Key="ListBoxMovies">
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="ListBoxItem"  >
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Height" Value="Auto"/>
+                    <Setter Property="Width" Value="200"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <TextBlock Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+                                        </Grid>
+                                        <Grid Grid.Row="1">
+                                            <Image Source="https://avatars.githubusercontent.com/u/99258165?v=4" Height="200"/>
+                                        </Grid>
+                                        <Grid Grid.Row="2">
+                                            <TextBlock Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+                                        </Grid>
+                                        <Grid Grid.Row="3">
+                                            <TextBlock Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+                                        </Grid>
+                                    </Grid>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

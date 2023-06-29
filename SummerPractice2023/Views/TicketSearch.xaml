@@ -41,6 +41,7 @@
                 <DataGridTextColumn Header="{DynamicResource m_startDate}" Binding="{Binding startDate}"/>
                 <DataGridTextColumn Header="{DynamicResource m_endDate}" Binding="{Binding endDate}"/>
                 <DataGridTextColumn Header="{DynamicResource m_price}" Binding="{Binding price}"/>
+                <DataGridCheckBoxColumn Binding="{Binding Like}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

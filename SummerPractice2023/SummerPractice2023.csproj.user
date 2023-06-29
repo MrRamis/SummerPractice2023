@@ -9,7 +9,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\DetailingPosts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DetailingTicketSearch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Posts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Settings\Settings.xaml.cs">
@@ -41,13 +50,7 @@
     <Page Update="Resources\DictionaryGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DictionaryMenu.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Resources\DictionaryState.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryTabControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Languages\lang.en.xaml">
@@ -56,7 +59,13 @@
     <Page Update="Resources\Languages\lang.ru.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DictionaryStackPanel.xaml">
+    <Page Update="Views\DetailingPosts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DetailingTicketSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Posts.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserView\UpdateUser.xaml">

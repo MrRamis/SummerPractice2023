@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\App.xaml
-16-1479308482
+1688824505
 
-27-443722899
+30735088181
 247-734474820
-Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryMenu.xaml;Resources\DictionaryStackPanel.xaml;Resources\DictionaryState.xaml;Resources\DictionaryTabControl.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\MainWindow.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\UserView\Authorization.xaml;Views\UserView\InfoUser.xaml;Views\UserView\Registration.xaml;Views\UserView\UpdateUser.xaml;
+Resources\DictionaryContextMenu.xaml;Resources\DictionaryDataGrid.xaml;Resources\DictionaryGrid.xaml;Resources\DictionaryState.xaml;Resources\Languages\lang.en.xaml;Resources\Languages\lang.ru.xaml;Views\DetailingPosts.xaml;Views\DetailingTicketSearch.xaml;Views\MainWindow.xaml;Views\Posts.xaml;Views\Settings\Settings.xaml;Views\TicketSearch.xaml;Views\UserView\Authorization.xaml;Views\UserView\InfoUser.xaml;Views\UserView\Registration.xaml;Views\UserView\UpdateUser.xaml;
 
 False
 

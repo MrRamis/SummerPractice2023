@@ -68,8 +68,6 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryContextMenu.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryDataGrid.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryGrid.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryMenu.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryTabControl.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.en.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.exe
 D:\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\SummerPractice2023.dll.config
@@ -151,7 +149,6 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\Languages\lang.ru.baml
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.g.cs
 D:\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\TicketSearch.baml
-C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Resources\DictionaryStackPanel.baml
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\UserView\Authorization.g.cs
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\UserView\InfoUser.g.cs
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\UserView\Registration.g.cs
@@ -189,3 +186,9 @@ C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\System.Linq.Dynamic.Core.dll
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\System.Xml.XPath.XmlDocument.dll
 C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\bin\Debug\net7.0-windows\TimeZoneConverter.dll
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\DetailingPosts.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\DetailingTicketSearch.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\Posts.g.cs
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\DetailingPosts.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\DetailingTicketSearch.baml
+C:\Users\Ramis\Documents\GitHub\SummerPractice2023\SummerPractice2023\obj\Debug\net7.0-windows\Views\Posts.baml
