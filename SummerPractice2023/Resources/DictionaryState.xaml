@@ -57,7 +57,7 @@
         </Style.Resources>
     </Style>
 
-    <Style TargetType="ListBox" x:Key="ListBoxMovies">
+    <Style TargetType="ListBox" x:Key="ListBoxPost">
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="ListBoxItem"  >
