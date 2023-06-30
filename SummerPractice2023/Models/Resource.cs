@@ -32,7 +32,7 @@ namespace SummerPractice2023.Models
 
                 ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
 
-                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                  Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             }
         }
         public static void DefaultTheme()

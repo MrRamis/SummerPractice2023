@@ -46,7 +46,7 @@ namespace SummerPractice2023.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("/Resources/Languages/lang.en")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Resources/Languages/lang.en")]
         public string Language {
             get {
                 return ((string)(this["Language"]));

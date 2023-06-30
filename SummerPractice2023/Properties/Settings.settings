@@ -9,7 +9,7 @@
       <Value Profile="(Default)">Resources/Topics/light</Value>
     </Setting>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/Resources/Languages/lang.en</Value>
+      <Value Profile="(Default)">Resources/Languages/lang.en</Value>
     </Setting>
     <Setting Name="UserId" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

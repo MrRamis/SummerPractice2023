@@ -43,6 +43,8 @@
         <StackPanel Grid.Row="1">
             <ListBox ItemsSource="{Binding posts}" Style="{DynamicResource ListBoxPost}">
                 <ListBoxItem></ListBoxItem>
+                <ListBoxItem></ListBoxItem>
+                <ListBoxItem></ListBoxItem>
             </ListBox>
         </StackPanel>
     </Grid>

@@ -9,5 +9,6 @@ namespace SummerPractice2023.Views
     {
         public ObservableCollection<JsData> jsData;
         public User User;
+        public Posts Post;
     }
 }

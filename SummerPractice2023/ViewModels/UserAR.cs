@@ -14,7 +14,7 @@ namespace SummerPractice2023.ViewModels
     public class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        ObservableCollection<Posts> posts { get; set; }
+        ObservableCollection<DB.Posts> posts { get; set; }
         public User User
         {
             get
