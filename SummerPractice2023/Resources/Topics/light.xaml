@@ -30,4 +30,7 @@
         <Setter Property="BorderBrush" Value="Gray"/>
         <Setter Property="Margin" Value="5 0 5 5"/>
     </Style>
+
+    <Style x:Key="ListBoxPostStyle" BasedOn="{StaticResource ListBoxPost}">
+    </Style>
 </ResourceDictionary>

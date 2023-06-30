@@ -3,6 +3,7 @@ using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.UserView;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +14,7 @@ namespace SummerPractice2023.ViewModels
     public class UserAR : INotifyPropertyChanged
     {
         #region Variables
+        ObservableCollection<Posts> posts { get; set; }
         public User User
         {
             get

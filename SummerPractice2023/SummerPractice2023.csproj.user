@@ -41,15 +41,6 @@
     <Resource Update="Resources\Topics\dark.xaml">
       <SubType>Designer</SubType>
     </Resource>
-    <Page Update="Resources\DictionaryContextMenu.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryDataGrid.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\DictionaryGrid.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Resources\DictionaryState.xaml">
       <SubType>Designer</SubType>
     </Page>
