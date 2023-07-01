@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SummerPractice2023.DB.Js;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace SummerPractice2023.Views
     /// </summary>
     public partial class DetailingTicketSearch : Window
     {
-        public DetailingTicketSearch()
+        public DetailingTicketSearch(JsData jsData)
         {
             InitializeComponent();
         }

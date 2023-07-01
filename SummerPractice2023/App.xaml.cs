@@ -20,7 +20,7 @@ namespace SummerPractice2023
 
             if (SummerPractice2023.Properties.Settings.Default.UserId == "")
             {
-                 Views.UserView.Authorization authorization = new Views.UserView.Authorization(structv);
+                Views.UserView.Authorization authorization = new Views.UserView.Authorization(structv);
                 authorization.Show();
             }
             else

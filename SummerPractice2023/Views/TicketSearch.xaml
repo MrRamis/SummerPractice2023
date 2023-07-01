@@ -34,7 +34,7 @@
             <Button Content="{DynamicResource m_clean}" Style="{DynamicResource ButtonStyle}" Command="{Binding Clean}" Grid.Row="0" Grid.Column="5"/>
             <Button Content="{DynamicResource m_update}" Style="{DynamicResource ButtonStyle}" Command="{Binding Update}" Grid.Row="0" Grid.Column="6"/>
         </Grid>
-        <DataGrid Grid.Row="1" ItemsSource="{Binding LogEntriesStoreView}" Style="{DynamicResource State_DataGrid}">
+        <DataGrid Grid.Row="1" ItemsSource="{Binding LogEntriesStoreView}" Style="{DynamicResource State_DataGrid}" SelectedItem="{Binding JsDataItem}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="{DynamicResource m_startCity}" Binding="{Binding startCity}"/>
                 <DataGridTextColumn Header="{DynamicResource m_endCity}" Binding="{Binding endCity}"/>

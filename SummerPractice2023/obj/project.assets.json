@@ -9343,26 +9343,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ramis\\.nuget\\packages\\": {},
-    "C:\\Users\\Ramis\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
+    "C:\\Users\\farit\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ramis\\Documents\\GitHub\\SummerPractice2023\\SummerPractice2023\\SummerPractice2023.csproj",
+      "projectUniqueName": "D:\\GitHub\\SummerPractice2023\\SummerPractice2023\\SummerPractice2023.csproj",
       "projectName": "SummerPractice2023",
-      "projectPath": "C:\\Users\\Ramis\\Documents\\GitHub\\SummerPractice2023\\SummerPractice2023\\SummerPractice2023.csproj",
-      "packagesPath": "C:\\Users\\Ramis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ramis\\Documents\\GitHub\\SummerPractice2023\\SummerPractice2023\\obj\\",
+      "projectPath": "D:\\GitHub\\SummerPractice2023\\SummerPractice2023\\SummerPractice2023.csproj",
+      "packagesPath": "C:\\Users\\farit\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\SummerPractice2023\\SummerPractice2023\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Users\\Ramis\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ramis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Users\\Ramis\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+        "C:\\Users\\farit\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9371,7 +9368,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9432,7 +9428,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

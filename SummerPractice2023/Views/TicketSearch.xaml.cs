@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static SummerPractice2023.ViewModels.VMMainWindow;
 
 namespace SummerPractice2023.Views
 {
@@ -22,8 +23,8 @@ namespace SummerPractice2023.Views
     {
         public TicketSearch(structV structv)
         {
-            InitializeComponent();
             DataContext = new VMTicketSearch(structv);
+            InitializeComponent();
         }
     }
 }

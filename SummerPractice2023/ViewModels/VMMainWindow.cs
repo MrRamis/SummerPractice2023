@@ -3,14 +3,16 @@ using SummerPractice2023.DB.Js;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.UserView;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace SummerPractice2023.ViewModels
 {
-    internal class VMMainWindow : INotifyPropertyChanged
+    public class VMMainWindow : INotifyPropertyChanged
     {
         ObservableCollection<JsData> jsData { get; set; }
         structV structv;
@@ -20,6 +22,7 @@ namespace SummerPractice2023.ViewModels
         TicketSearch ticketSearch { get; set; }
         public VMMainWindow(structV structv, Window wnd)
         {
+
             UserAR userAR = new UserAR(structv);
             this.structv = structv;
             this.jsData = structv.jsData;

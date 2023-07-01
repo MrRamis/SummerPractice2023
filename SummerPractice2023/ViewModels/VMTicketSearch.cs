@@ -1,14 +1,18 @@
 ﻿using SummerPractice2023.DB;
 using SummerPractice2023.DB.Js;
+using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
+using static SummerPractice2023.ViewModels.VMMainWindow;
 
 namespace SummerPractice2023.ViewModels
 {
-    internal class VMTicketSearch : INotifyPropertyChanged
+    public class VMTicketSearch : INotifyPropertyChanged
     {
         public ICollectionView _LogEntriesStoreView;
         public ICollectionView LogEntriesStoreView
@@ -21,6 +25,7 @@ namespace SummerPractice2023.ViewModels
                 NotifyPropertyChanged("LogEntriesStoreView");
             }
         }
+        
         public ObservableCollection<JsData> jsData { get; set; }
         structV structv;
         private string _StartCity;
@@ -49,6 +54,20 @@ namespace SummerPractice2023.ViewModels
                 NotifyPropertyChanged("EndCity");
             }
         }
+
+        private JsData _jsDataItem;
+        public JsData JsDataItem
+        {
+            get
+            {
+                return _jsDataItem;
+            }
+            set
+            {
+                _jsDataItem = value;
+                NotifyPropertyChanged("JsDataItem");
+            }
+        }
         public VMTicketSearch(structV structv)
         {
             this.jsData = structv.jsData;
@@ -57,7 +76,7 @@ namespace SummerPractice2023.ViewModels
             this.StartCity = "";
             this.EndCity = "";
         }
-
+  
         #region Command
         private RelayCommand _Select;
         public RelayCommand Select
@@ -102,6 +121,21 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
+
+        private RelayCommand _InfoJsDataItem;
+        public RelayCommand InfoJsDataItem
+        {
+            get
+            {
+                return _InfoJsDataItem ?? new RelayCommand(obj =>
+                {
+                    DetailingTicketSearch detailingTicketSearch = new DetailingTicketSearch(JsDataItem);
+                });
+            }
+        }
+
+    
+
         #endregion
 
         #region Filter

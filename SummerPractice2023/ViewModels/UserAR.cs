@@ -273,7 +273,7 @@ namespace SummerPractice2023.ViewModels
         }
         #endregion
 
-        public UserAR(structV structV)
+        public UserAR(structV structV, bool re)
         {
             this.Status = "";
             this.structv = structV;
@@ -285,13 +285,16 @@ namespace SummerPractice2023.ViewModels
             this.Surname = structV.User.Surname;
             this.Patronymic = structV.User.Patronymic;
         }
+        public UserAR(structV structV)
+        {
+            this.Status = "";
+            this.structv = structV;
+        }
         public UserAR()
         {
             this.Status = "";
-            this.Image = "https://avatars.githubusercontent.com/u/99258165?v=4";
-            Lodin = "";
-            Password = "";
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {
