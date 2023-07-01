@@ -8,7 +8,6 @@
                 <ResourceDictionary Source="Resources/DictionaryState.xaml"/>
                 <ResourceDictionary Source="Resources/Languages/lang.en.xaml"/>
                 <ResourceDictionary Source="Resources/Topics/light.xaml"/>
-                <!--<ResourceDictionary Source="{Binding Path=(Properties:Settings.Default).Language}"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -12,8 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\farit\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\farit\\.nuget\\packages",
+      "C:\\Users\\Ramis\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Ramis\\.nuget\\packages",
+      "C:\\Users\\Ramis\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

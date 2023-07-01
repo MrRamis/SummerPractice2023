@@ -1,14 +1,12 @@
 ﻿using SummerPractice2023.DB;
 using SummerPractice2023.DB.Js;
-using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Data;
-using System.Windows.Input;
-using static SummerPractice2023.ViewModels.VMMainWindow;
+using System.Windows.Shapes;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -21,11 +19,13 @@ namespace SummerPractice2023.ViewModels
             {
                 return _LogEntriesStoreView;
             }
-            set { _LogEntriesStoreView = value;
+            set
+            {
+                _LogEntriesStoreView = value;
                 NotifyPropertyChanged("LogEntriesStoreView");
             }
         }
-        
+
         public ObservableCollection<JsData> jsData { get; set; }
         structV structv;
         private string _StartCity;
@@ -76,7 +76,11 @@ namespace SummerPractice2023.ViewModels
             this.StartCity = "";
             this.EndCity = "";
         }
-  
+        public VMTicketSearch(JsData jsData)
+        {
+            this._jsDataItem = jsData;
+        }
+
         #region Command
         private RelayCommand _Select;
         public RelayCommand Select
@@ -134,10 +138,29 @@ namespace SummerPractice2023.ViewModels
             }
         }
 
-    
+        private RelayCommand _BuyATicket;
+        public RelayCommand BuyATicket
+        {
+            get
+            {
+                return _BuyATicket ?? new RelayCommand(obj =>
+                {
+                    MessageBox.Show("Билет куплен!");
+                });
+            }
+        }
+        private RelayCommand _Like;
+        public RelayCommand Like
+        {
+            get
+            {
+                return _Like ?? new RelayCommand(obj =>
+                {
 
+                });
+            }
+        }
         #endregion
-
         #region Filter
         public bool Filter(object sender)
         {
@@ -188,7 +211,6 @@ namespace SummerPractice2023.ViewModels
             return false;
         }
         #endregion
-
 
         public event PropertyChangedEventHandler? PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)

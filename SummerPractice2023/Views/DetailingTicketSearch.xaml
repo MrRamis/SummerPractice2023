@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SummerPractice2023.Views"
         mc:Ignorable="d"
-        Title="DetailingTicketSearch" Height="450" Width="800">
+        Title="DetailingTicketSearch" Height="Auto" Width="Auto">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{DynamicResource m_startCity}" Style="{DynamicResource TextBlockStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding StartCity}" Style="{DynamicResource TextBoxStyle}"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{DynamicResource m_endCity}" Style="{DynamicResource TextBlockStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding endCity}" Style="{DynamicResource TextBoxStyle}"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="{DynamicResource m_select}" Style="{DynamicResource TextBlockStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding startDate}" Style="{DynamicResource TextBoxStyle}"/>
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="{DynamicResource m_clean}" Style="{DynamicResource TextBlockStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding m_endDate}" Style="{DynamicResource TextBoxStyle}"/>
+        <TextBlock Grid.Row="0" Grid.Column="4" Text="{DynamicResource m_update}" Style="{DynamicResource TextBlockStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="4" Text="{Binding m_price}" Style="{DynamicResource TextBoxStyle}"/>
+        <Button Grid.RowSpan="1" Grid.Column="5" Content="{DynamicResource m_buyATicket}" Style="{DynamicResource ButtonStyle}" />
     </Grid>
 </Window>
