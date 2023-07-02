@@ -2,6 +2,7 @@
 using SummerPractice2023.DB.Tables;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
+using SummerPractice2023.Views.Settings;
 using SummerPractice2023.Views.UserView;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -264,6 +265,7 @@ namespace SummerPractice2023.ViewModels
                     {
                         if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) != null)
                         {
+                            structv.User = EFCommandModel.GetUser(Properties.Settings.Default.UserId);
                             MainWindow mainWindow = new MainWindow(structv);
                             mainWindow.Show();
                             wnd.Close();
