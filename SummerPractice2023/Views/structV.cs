@@ -8,6 +8,6 @@ namespace SummerPractice2023.Views
     {
         public ObservableCollection<JsData> jsData;
         public User User;
-        public SummerPractice2023.DB.Posts posts;
+        public ObservableCollection<SummerPractice2023.DB.Post> posts;
     }
 }

@@ -13,7 +13,7 @@ namespace SummerPractice2023.DB
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Data> Datas { get; set; }
-
+        public DbSet<DB.Post> Posts { get; set; }
         public ApplicationContext()
         {
             Database.EnsureCreated();

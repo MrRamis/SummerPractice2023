@@ -5,7 +5,7 @@ namespace SummerPractice2023.Views
 {
     public partial class DetailingPosts : Window
     {
-        public DetailingPosts(DB.Posts posts)
+        public DetailingPosts(DB.Post posts)
         {
             DataContext = new VMPosts(posts);
             InitializeComponent();

@@ -16,7 +16,7 @@ namespace SummerPractice2023
             {
                 jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV"),
                 User = null,
-                posts = null
+                posts = EFCommandModel.GetPots()
 
             };
 

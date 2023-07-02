@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SummerPractice2023.Views"
         mc:Ignorable="d"
-        Title="DetailingPosts" Height="450" Width="800">
+        Title="DetailingPosts" Height="Auto" Width="Auto">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,16 +14,16 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBlock Text="{Binding Author}" Style="{DynamicResource TextBlockStyle}"/>
         </Grid>
         <Grid Grid.Row="1">
-            <Image Source="https://avatars.githubusercontent.com/u/99258165?v=4" Height="200"/>
+            <Image Source="{Binding Imade}" Height="200"/>
         </Grid>
         <Grid Grid.Row="2">
-            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBlock Text="{Binding Description}" Style="{DynamicResource TextBlockStyle}"/>
         </Grid>
         <Grid Grid.Row="3">
-            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+            <TextBlock Text="{Binding Address}" Style="{DynamicResource TextBlockStyle}"/>
         </Grid>
     </Grid>
 </Window>

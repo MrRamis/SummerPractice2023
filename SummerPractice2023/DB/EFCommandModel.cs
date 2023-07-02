@@ -44,7 +44,6 @@ namespace SummerPractice2023.DB
                 }
             }
         }
-
         public static ObservableCollection<JsData> JsDataAndDataLice(ObservableCollection<JsData> jsDatas)
         {
             foreach (var item in jsDatas)
@@ -57,7 +56,25 @@ namespace SummerPractice2023.DB
             }
             return jsDatas;
         }
-
+        public static ObservableCollection<Post> GetPots()
+        {
+            ObservableCollection<Post> posts = new ObservableCollection<Post>();
+            List<Post> postList = null;
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                postList = db.Posts.ToList();
+            }
+            Random rng = new Random();
+            if (postList.Count > 0)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    int rInt = rng.Next(0, postList.Count);
+                    posts.Add(postList[rInt]);
+                }
+            }
+            return posts;
+        }
         public static Data GetData(string searchToken, string IdUser)
         {
             using (ApplicationContext db = new ApplicationContext())
@@ -71,6 +88,30 @@ namespace SummerPractice2023.DB
                     return null;
             }
         }
+        public static Post AddPostNumberOfViews(Post postT)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                Post post = GetPostId(postT.IdPosts);
+                db.Attach(post);
+                if (post != null)
+                {
+                    post.NumberOfViews = post.NumberOfViews+1;
+                }
+                db.SaveChanges();
+                return post;
+            }
+        }
+        public static Post GetPostId(string IdPosts)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                Post post = null;
+                post = db.Posts.FirstOrDefault(p => p.IdPosts == IdPosts);
+                return post;
+            }
+        }
+
         public static void DeletData(Data data)
         {
             using (ApplicationContext db = new ApplicationContext())

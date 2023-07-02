@@ -41,7 +41,7 @@
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1">
-            <ListBox ItemsSource="{Binding posts}" Style="{DynamicResource ListBoxPost}" SelectedItem="{Binding ItemPosts}">
+            <ListBox ItemsSource="{Binding posts}" Style="{DynamicResource ListBoxPost}" MaxHeight="400" SelectedItem="{Binding ItemPosts}">
               
             </ListBox>
         </StackPanel>

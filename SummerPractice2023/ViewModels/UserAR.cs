@@ -14,9 +14,9 @@ namespace SummerPractice2023.ViewModels
     public class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        public ObservableCollection<DB.Posts> posts { get; set; }
-        private DB.Posts _ItemPosts;
-        public DB.Posts ItemPosts
+        public ObservableCollection<DB.Post> posts { get; set; }
+        private DB.Post _ItemPosts;
+        public DB.Post ItemPosts
         {
             get
             {
@@ -24,13 +24,21 @@ namespace SummerPractice2023.ViewModels
             }
 
             set
-           {
+            {
                 _ItemPosts = value;
                 if (ItemPosts != null)
                 {
+
+                    foreach (var post in structv.posts)
+                    {
+                        if (post.IdPosts == _ItemPosts.IdPosts)
+                        {
+                            post.IdPosts = EFCommandModel.AddPostNumberOfViews(ItemPosts).IdPosts;
+                        }
+                    }
                     Views.DetailingPosts detailingPosts = new Views.DetailingPosts(ItemPosts);
                     detailingPosts.ShowDialog();
-                    _ItemPosts = null; 
+                    _ItemPosts = null;
                 }
             }
         }
@@ -302,6 +310,7 @@ namespace SummerPractice2023.ViewModels
                     {
                         Views.DetailingPosts detailingPosts = new Views.DetailingPosts(ItemPosts);
                         detailingPosts.ShowDialog();
+                        EFCommandModel.AddPostNumberOfViews(ItemPosts);
                     }
                 });
             }
@@ -323,7 +332,7 @@ namespace SummerPractice2023.ViewModels
                 this.Surname = structV.User.Surname;
                 this.Patronymic = structV.User.Patronymic;
             }
-            //posts = structV.posts;
+            posts = structV.posts;
         }
 
         public UserAR()
