@@ -22,6 +22,8 @@
     <v:String x:Key="m_surname">Фамилие</v:String>
     <v:String x:Key="m_patronymic">Отчество</v:String>
 
+    <v:String x:Key="m_favourites">Избранное</v:String>
+
     <v:String x:Key="m_delete">Удалить</v:String>
     <v:String x:Key="m_saev">Сохранить</v:String>
     <v:String x:Key="m_update">Обновить</v:String>
@@ -32,6 +34,10 @@
 
     <v:String x:Key="m_profileSettings">Настройки профиля</v:String>
     <v:String x:Key="m_profile">Профиль</v:String>
-    
+
     <v:String x:Key="m_buyATicket">Купить</v:String>
+
+    <v:String x:Key="m_like">Лайк</v:String>
+
+    <v:String x:Key="m_detailedFlightInformation">Детальная информация о рейсе</v:String>
 </ResourceDictionary>

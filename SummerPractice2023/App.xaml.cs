@@ -15,7 +15,7 @@ namespace SummerPractice2023
             structv = new structV
             {
                 jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV"),
-                User = new DB.Tables.User()
+                User = null
             };
 
             if (SummerPractice2023.Properties.Settings.Default.UserId == "")
@@ -25,6 +25,7 @@ namespace SummerPractice2023
             }
             else
             {
+                structv.jsData = EFCommandModel.JsDataAndDataLice(structv.jsData);
                 structv.User = EFCommandModel.GetUserId(SummerPractice2023.Properties.Settings.Default.UserId);
                 MainWindow mainWindow = new MainWindow(structv);
                 mainWindow.Show();

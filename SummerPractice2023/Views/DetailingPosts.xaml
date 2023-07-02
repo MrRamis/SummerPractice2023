@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="DetailingPosts" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Image Source="https://avatars.githubusercontent.com/u/99258165?v=4" Height="200"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <TextBlock d:Text="{Binding }" Style="{DynamicResource TextBlockStyle}"/>
+        </Grid>
     </Grid>
 </Window>

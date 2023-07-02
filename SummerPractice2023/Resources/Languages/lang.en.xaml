@@ -34,4 +34,10 @@
     <v:String x:Key="m_profile">Profile</v:String>
 
     <v:String x:Key="m_buyATicket">Buy a ticket</v:String>
+
+    <v:String x:Key="m_favourites">Favourites</v:String>
+
+    <v:String x:Key="m_like">Like</v:String>
+
+    <v:String x:Key="m_detailedFlightInformation">Detailed flight information</v:String>
 </ResourceDictionary>

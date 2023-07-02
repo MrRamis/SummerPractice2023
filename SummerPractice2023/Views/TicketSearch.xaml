@@ -25,6 +25,8 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="{DynamicResource m_startCity}" Style="{DynamicResource TextBlockStyle}" Grid.Row="0" Grid.Column="0"/>
             <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding StartCity}" Style="{DynamicResource TextBoxStyle}"/>
@@ -33,6 +35,8 @@
             <Button Content="{DynamicResource m_select}" Style="{DynamicResource ButtonStyle}" Command="{Binding Select}" Grid.Row="0" Grid.Column="4"/>
             <Button Content="{DynamicResource m_clean}" Style="{DynamicResource ButtonStyle}" Command="{Binding Clean}" Grid.Row="0" Grid.Column="5"/>
             <Button Content="{DynamicResource m_update}" Style="{DynamicResource ButtonStyle}" Command="{Binding Update}" Grid.Row="0" Grid.Column="6"/>
+            <Button Content="{DynamicResource m_favourites}" Style="{DynamicResource ButtonStyle}" Command="{Binding Favourites}" Grid.Row="0" Grid.Column="7"/>
+            <Button Content="{DynamicResource m_detailedFlightInformation}" Style="{DynamicResource ButtonStyle}" Command="{Binding InfoJsDataItem}" Grid.Row="0" Grid.Column="8"/>
         </Grid>
         <DataGrid Grid.Row="1" ItemsSource="{Binding LogEntriesStoreView}" Style="{DynamicResource State_DataGrid}" SelectedItem="{Binding JsDataItem}">
             <DataGrid.Columns>

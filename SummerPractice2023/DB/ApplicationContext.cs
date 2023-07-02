@@ -12,6 +12,7 @@ namespace SummerPractice2023.DB
     internal class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Data> Datas { get; set; }
 
         public ApplicationContext()
         {
@@ -19,7 +20,7 @@ namespace SummerPractice2023.DB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-     
+            modelBuilder.Entity<Data>().HasKey(u => new { u.searchToken, u.IdUser });
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

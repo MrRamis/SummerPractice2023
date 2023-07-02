@@ -1,14 +1,11 @@
-﻿using SummerPractice2023.DB;
-using SummerPractice2023.DB.Js;
+﻿using SummerPractice2023.DB.Js;
 using SummerPractice2023.Models;
 using SummerPractice2023.Views;
 using SummerPractice2023.Views.UserView;
-using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -26,7 +23,7 @@ namespace SummerPractice2023.ViewModels
             UserAR userAR = new UserAR(structv);
             this.structv = structv;
             this.jsData = structv.jsData;
-            this.frame = wnd.FindName("Fram") as Frame; 
+            this.frame = wnd.FindName("Fram") as Frame;
             this.updateUser = new UpdateUser(this.structv, userAR);
             this.infoUser = new InfoUser(this.structv, userAR);
             this.ticketSearch = new TicketSearch(this.structv);
@@ -65,6 +62,7 @@ namespace SummerPractice2023.ViewModels
                 {
                     Window? win = obj as Window;
                     SummerPractice2023.Properties.Settings.Default.Reset();
+                    structv.User = null;
                     Authorization authorization = new Authorization(structv);
                     authorization.Show();
                     win.Close();
@@ -106,7 +104,6 @@ namespace SummerPractice2023.ViewModels
             }
         }
         #endregion
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {

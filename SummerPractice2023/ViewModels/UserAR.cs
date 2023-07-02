@@ -142,7 +142,7 @@ namespace SummerPractice2023.ViewModels
                     }
                     else
                     {
-                        if (!Lodin.Contains(" ") || !Password.Contains(" ") || !Lodin.Contains("") || !Password.Contains(""))
+                        if (!(Password == null) || !(Lodin == null) || !Lodin.Contains(" ") || !Password.Contains(" ") || !Lodin.Contains("") || !Password.Contains(""))
                         {
                             if (EFCommandModel.GetUser(Lodin, Hash.hashPassword(Password)) == null)
                             {
@@ -272,24 +272,24 @@ namespace SummerPractice2023.ViewModels
             }
         }
         #endregion
-
-        public UserAR(structV structV, bool re)
-        {
-            this.Status = "";
-            this.structv = structV;
-            this.Image = structV.User.Image;
-            this.Lodin = structV.User.Login;
-            this.Password = structV.User.Password;
-            this.Status = structV.User.Status;
-            this.Name = structV.User.Name;
-            this.Surname = structV.User.Surname;
-            this.Patronymic = structV.User.Patronymic;
-        }
         public UserAR(structV structV)
         {
-            this.Status = "";
             this.structv = structV;
+            this.Status = "";
+            if (structv.User != null)
+            {
+                structv.jsData = EFCommandModel.JsDataAndDataLice(structv.jsData);
+                this.Status = "";
+                this.Image = structV.User.Image;
+                this.Lodin = structV.User.Login;
+                this.Password = structV.User.Password;
+                this.Status = structV.User.Status;
+                this.Name = structV.User.Name;
+                this.Surname = structV.User.Surname;
+                this.Patronymic = structV.User.Patronymic;
+            }
         }
+
         public UserAR()
         {
             this.Status = "";

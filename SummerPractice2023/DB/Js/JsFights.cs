@@ -1,15 +1,10 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SummerPractice2023.DB.Js
 {
     public class JsFights
     {
-       public JsMeta meta { get; set; }
+        public JsMeta meta { get; set; }
         public IList<JsData> data { get; set; }
     }
 }

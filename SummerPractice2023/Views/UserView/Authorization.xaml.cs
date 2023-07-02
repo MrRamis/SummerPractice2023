@@ -7,11 +7,6 @@ namespace SummerPractice2023.Views.UserView
 {
     public partial class Authorization : Window
     {
-        public Authorization(structV structV, bool re)
-        {
-            DataContext = new UserAR(structV, false);
-            InitializeComponent();   
-        }
         public Authorization(structV structV)
         {
             InitializeComponent();

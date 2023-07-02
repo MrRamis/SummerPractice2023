@@ -6,7 +6,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Shapes;
 
 namespace SummerPractice2023.ViewModels
 {
@@ -25,7 +24,6 @@ namespace SummerPractice2023.ViewModels
                 NotifyPropertyChanged("LogEntriesStoreView");
             }
         }
-
         public ObservableCollection<JsData> jsData { get; set; }
         structV structv;
         private string _StartCity;
@@ -54,6 +52,49 @@ namespace SummerPractice2023.ViewModels
                 NotifyPropertyChanged("EndCity");
             }
         }
+        public string StartDate
+        {
+            get
+            {
+                return JsDataItem.startDate.ToString();
+            }
+            set
+            {
+            }
+        }
+        public string EndDate
+        {
+            get
+            {
+                return JsDataItem.endDate.ToString();
+            }
+            set
+            {
+            }
+        }
+        public string Price
+        {
+            get
+            {
+                return JsDataItem.price.ToString();
+            }
+            set
+            {
+            }
+        }
+        private bool _Like;
+        public bool Like
+        {
+            get
+            {
+                return JsDataItem.Like;
+            }
+            set
+            {
+                JsDataItem.Like = value;
+                NotifyPropertyChanged("Like");
+            }
+        }
 
         private JsData _jsDataItem;
         public JsData JsDataItem
@@ -78,7 +119,9 @@ namespace SummerPractice2023.ViewModels
         }
         public VMTicketSearch(JsData jsData)
         {
-            this._jsDataItem = jsData;
+            this.StartCity = jsData.startCity;
+            this.EndCity = jsData.endCity;
+            this.JsDataItem = jsData;
         }
 
         #region Command
@@ -133,7 +176,11 @@ namespace SummerPractice2023.ViewModels
             {
                 return _InfoJsDataItem ?? new RelayCommand(obj =>
                 {
-                    DetailingTicketSearch detailingTicketSearch = new DetailingTicketSearch(JsDataItem);
+                    if (JsDataItem != null)
+                    {
+                        DetailingTicketSearch detailingTicketSearch = new DetailingTicketSearch(JsDataItem);
+                        detailingTicketSearch.ShowDialog();
+                    }
                 });
             }
         }
@@ -149,14 +196,16 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
-        private RelayCommand _Like;
-        public RelayCommand Like
+
+        private RelayCommand _Favourites;
+        public RelayCommand Favourites
         {
             get
             {
-                return _Like ?? new RelayCommand(obj =>
+                return _Favourites ?? new RelayCommand(obj =>
                 {
-
+                    LogEntriesStoreView.Filter = FavouritesFilter;
+                    LogEntriesStoreView.Refresh();
                 });
             }
         }
@@ -210,8 +259,17 @@ namespace SummerPractice2023.ViewModels
             }
             return false;
         }
+        public bool FavouritesFilter(object sender)
+        {
+            var obj = sender as JsData;
+            if (obj != null)
+            {
+                if (obj.Like == true)
+                    return true;
+            }
+            return false;
+        }
         #endregion
-
         public event PropertyChangedEventHandler? PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {
