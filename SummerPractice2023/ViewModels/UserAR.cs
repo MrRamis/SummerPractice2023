@@ -14,7 +14,26 @@ namespace SummerPractice2023.ViewModels
     public class UserAR : INotifyPropertyChanged
     {
         #region Variables
-        ObservableCollection<DB.Posts> posts { get; set; }
+        public ObservableCollection<DB.Posts> posts { get; set; }
+        private DB.Posts _ItemPosts;
+        public DB.Posts ItemPosts
+        {
+            get
+            {
+                return _ItemPosts;
+            }
+
+            set
+           {
+                _ItemPosts = value;
+                if (ItemPosts != null)
+                {
+                    Views.DetailingPosts detailingPosts = new Views.DetailingPosts(ItemPosts);
+                    detailingPosts.ShowDialog();
+                    _ItemPosts = null; 
+                }
+            }
+        }
         public User User
         {
             get
@@ -271,6 +290,22 @@ namespace SummerPractice2023.ViewModels
                 });
             }
         }
+
+        private RelayCommand _DetailingPosts;
+        public RelayCommand DetailingPosts
+        {
+            get
+            {
+                return _DetailingPosts ?? new RelayCommand(obj =>
+                {
+                    if (ItemPosts != null)
+                    {
+                        Views.DetailingPosts detailingPosts = new Views.DetailingPosts(ItemPosts);
+                        detailingPosts.ShowDialog();
+                    }
+                });
+            }
+        }
         #endregion
         public UserAR(structV structV)
         {
@@ -288,6 +323,7 @@ namespace SummerPractice2023.ViewModels
                 this.Surname = structV.User.Surname;
                 this.Patronymic = structV.User.Patronymic;
             }
+            //posts = structV.posts;
         }
 
         public UserAR()

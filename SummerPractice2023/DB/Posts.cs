@@ -9,7 +9,7 @@ namespace SummerPractice2023.DB
         public string? Author { get; set; }
         public string? Imade { get; set; }
         public string? Description { get; set; }
-        public string? NumberOfViews { get; set; }//количество просмотров
+        public int? NumberOfViews { get; set; }//количество просмотров
         public string? Category { get; set; }//категория
     }
 }
