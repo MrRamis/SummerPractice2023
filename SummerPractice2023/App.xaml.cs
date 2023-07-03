@@ -10,8 +10,6 @@ namespace SummerPractice2023
         public structV structv;
         public App()
         {
-            //https://raw.githubusercontent.com/Mirkitanov/jsonexmpl/main/avia.json
-            //https://pastebin.com/raw/BhAvx5UV
             structv = new structV
             {
                 jsData = CommandJson.GetAir("https://pastebin.com/raw/BhAvx5UV"),
@@ -32,7 +30,6 @@ namespace SummerPractice2023
                 MainWindow mainWindow = new MainWindow(structv);
                 mainWindow.Show();
             }
-            //   Resource.PastTopic();
              Resource.LanguageChange();
         }
     }
